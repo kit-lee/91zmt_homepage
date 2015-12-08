@@ -1,12 +1,11 @@
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>微官网</title>
+    <title>91自媒体</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css" id="css"> 
-    <script src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/echo.min.js"></script>
    
    <script src="js/jquer-mousewheel.min.js"></script>
@@ -565,9 +564,9 @@
   sz();
   back1();
   back2();
-  console.log('11111111');
+ 
   size4();
-  console.log('22222222');
+  
   size2();
   size3();
   threepage();
@@ -575,7 +574,7 @@
    sizzsix();
    twoma();
  $(window).resize(function(){
-  console.log('23244555');
+ 
     sz();
     back2();
     size4();
@@ -696,8 +695,7 @@ changeScreen('down');
         onProgress: function(swiper){
            var s=5*swiper.progress;
           currentSlideIndex = swiper.activeIndex;
-          console.log(swiper.activeIndex);
-          console.log(s);
+         
             if (s==3||s==5){
             document.getElementById("icon").src="img/icon2.png";
           }
@@ -730,8 +728,6 @@ changeScreen('down');
            }
            if (s == 1) {
                 pageTwoaddClassAnimation();
-                
-                console.log("000");
            }
           if (s == 2) {
               pageThirdaddClassAnimation();
@@ -787,7 +783,7 @@ $('#btn1').click(function(){
               changeScreen('down');
            }else if(dir=='Up' && currentSlideIndex==5)
            {
-             console.log('enyrin....');
+            
               changeScreen('Up');
             }
          
@@ -823,14 +819,14 @@ function changeTo(num,flag){
     if (flag == 'left1') {
         $('.showd5').animate({left:'-'+goleft},300, function(){
             var $dome = $('.showd5').children('li').last();
-            console.log('123132.......');
+          
             $('.showd5').children('li').first().before($dome);
             $('.showd5').css('left', 0);
         });
        $('.infolist').find('li').removeClass('infoon').eq(num).addClass('infoon');
         $('.tlistfive').find('li').removeClass('tonfive').eq(num).addClass('tonfive');
         return false;
-        console.log('lll');
+       
     }
     if (flag = 'right1') {
       $('.showd5').animate({left:'-'+goleft},300, function(){
@@ -859,15 +855,14 @@ function changeTo1(num,flag){
     if (flag == 'left') {
         $('.showd').animate({left:'-'+go},300, function(){
             var $dom = $('.showd').children('li').last();
-            console.log($dom);
-            console.log('123132.......');
+           
             $('.showd').children('li').first().before($dom);
             $('.showd').css('left', 0);
         });
         $('.infolist1').find('li').removeClass('infoon1').eq(num).addClass('infoon1');
         $('.tlist').find('li').removeClass('ton').eq(num).addClass('ton');
          $('.tdetail').find('li').removeClass('tdetails').eq(num).addClass('tdetails');
-        console.log('kkk');
+        
         return false;
     }
     if (flag = 'right') {
@@ -899,14 +894,14 @@ function changeTo2(num,flag){
     if (flag == 'leftj') {
         $('.showd1').animate({left:'-'+goleft1},300, function(){
             var $domeq = $('.showd1').children('li').last();
-            console.log('123132.......');
+         
             $('.showd1').children('li').first().before($domeq);
             $('.showd1').css('left', 0);
         });
       $('.infolist2').find('li').removeClass('infoon2').eq(num).addClass('infoon2');
        $('.tlist4').find('li').removeClass('ton4').eq(num).addClass('ton4');
         return false;
-        console.log('lll');
+      
     }
     if (flag = 'rightj') {
       $('.showd1').animate({left:'-'+goleft1},300, function(){
@@ -921,9 +916,9 @@ function changeTo2(num,flag){
 
 function size4(){
   var h=$('#back').height();
-  console.log('h='+h);
+  
   var w=5*h/9+'px';
-  console.log('w='+w);
+  
   $('#back').width(w);
 }
 
@@ -956,8 +951,6 @@ function back2(){
   var s1=$('.imgs').width();
   var s2=s1+'px';
   $('.imgs').height(s2);
-  console.log('s1='+s1);
-  console.log('s2='+s2);
  }
  function size3(){
   var t=$('.imgss').width();
@@ -978,8 +971,7 @@ function back2(){
   var f=$('.items').width();
   var f1=f+'px';
   $('.items').height(f1);
-  console.log('kk');
- }
+   }
 </script>
 <script type="text/javascript"> 
  var ua = navigator.userAgent;

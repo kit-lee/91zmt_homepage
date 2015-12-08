@@ -1,6 +1,6 @@
 <html lang="en"><head>
     <meta charset="utf-8">
-    <title>微官网</title>
+    <title>91自媒体</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
@@ -254,18 +254,18 @@ $('#wellcome').hide();
             * 宽度高度计算
             */
                 sz();
-              console.log('ss');
+            
               back1();
               back2();
-              console.log('11111111');
+            
               size4();
-              console.log('22222222');
+             
               size2();
               size3();
               threepage();
               fourpage();
              $(window).resize(function(){
-              console.log('23244555');
+          
                  sz();
                 back2();
                 size4();
@@ -394,10 +394,9 @@ $('#wellcome').hide();
         onProgress: function(swiper){
            var s=6*swiper.progress;
 
-           console.log('s='+s);
+           
           currentSlideIndex = swiper.activeIndex;
-          console.log(swiper.activeIndex);
-          console.log(s);
+         
             if (s==3||s==5||s==6){
             document.getElementById("icon").src="img/icon2.png";
           }
@@ -488,7 +487,7 @@ if(s==4){
        
 
 
-                console.log("000");
+             
            }
             
         }
@@ -547,7 +546,6 @@ $('#btn1').click(function(){
               changeScreen('down');
            }else if(dir=='Up' && currentSlideIndex==6)
            {
-             console.log('enyrin....');
               changeScreen('Up');
             }
          
@@ -569,9 +567,7 @@ $('#btn1').click(function(){
 
 function size4(){
   var h=$('#back').height();
-  console.log('h='+h);
   var w=5*h/9+'px';
-  console.log('w='+w);
   $('#back').width(w);
 }
 
@@ -579,8 +575,6 @@ function size4(){
                 {
        var h1=$('#ss').height();
        var w1=255*h1/437+'px';
-      console.log('w1='+w1);
-       console.log('h1='+h1);
                   }
  
 function back1(){
@@ -611,10 +605,10 @@ function back2(){
  }
  function fourpage(){
   var f=$('.items').width();
-  console.log(f);
+ 
   var f1=f+'px';
   $('.items').height(f1);
-  console.log('kk');
+ 
  }
 </script>
 <script type="text/javascript"> 
