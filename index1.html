@@ -1,0 +1,654 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>微官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" id="css"> 
+    
+   
+    <!--amaze ui-->
+   <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+ 
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <script src="assets/js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/amazeui.lazyload.js"></script>
+   <script src="js/jquer-mousewheel.min.js"></script>
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body style="overflow:hidden;" >
+  <div id="wellcome" style="background:#00a6e7">
+<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+<tr>
+<form name=loading>
+<td align=center>
+<input type=text name=chart size="34" style="font-family:Arial;
+font-weight:bolder; color:#00a6e7;
+background-color:00a6e7; padding-left:4px; padding-right:4px; border-style:none; border:0">
+<br>
+<!--<input type=text name=percent size=46 style="font-family:Arial;
+color:gray; text-align:center;
+border-width:medium; border-style:none;">-->
+<script>
+var bar = 0
+var line = ""
+var amount =""
+count()
+function count(){
+bar= bar+2
+amount =amount + line
+document.loading.chart.value=amount
+/*document.loading.percent.value=bar+"%"*/
+if (bar<50)
+{setTimeout("count()",100);}
+else
+{
+
+$('#1').show();
+$('#wellcome').hide();
+}
+}
+</script>
+</p>
+</td>
+</form>
+</tr>
+</table>
+</div>
+  <!--导航-->
+  <header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+      <a href="#left-link" class="">
+        
+      </a>
+    </div>
+    <div class="am-header-right am-header-nav">
+      <a href="#right-link" class="" data-am-offcanvas="{target:'#a'}">
+        <span class="am-header-nav-title"></span>
+       
+       <img src="img/icon1.png" id="icon">
+      
+  
+      </a>
+    </div>
+  </header>
+  <!--侧边栏-->
+  <div id="a" class="am-offcanvas">
+    <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+      <div class="am-offcanvas-content">
+        <div class="return doc-oc-js" data-rel="close">
+          <img src="img/return.png">
+        </div>
+      <p class="nav"><a href="#" id="btn1">91自媒体</a></p>
+      <p class="nav"><a href="#" id="btn2">系统介绍</a></p>
+      <p class="nav"><a href="#" id="btn3">服务包括</a></p>
+      <p class="nav"><a href="#" id="btn4">涵盖行业</a></p>
+      <p class="nav"><a href="#" id="btn5">版本选择</a></p>
+      <p class="nav"><a href="#" id="btn6">精品案例</a></p>
+      <p class="nav" ><a href="#" id="btn8" >联系我们</a></p>
+      <p class="nav"><!--<a href="http://www.91zmt.com/wenwen/91Register/information.html"><!--<img src="img/experience.png" class="icons">-->产品体验<!--</a>--></p>
+      </div>
+    </div>
+  </div>
+  <div id="main-container" style="position: absolute; top:0;height:100%;width:100%">
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-v">
+        <div id="1" class="swiper-wrapper" style="display:none" >
+            <!--第一部分-->
+            <div class="swiper-slide " style="background:#00a6e7" >
+              <div class="icon">
+                <img src="img/logo.png">
+              </div> 
+              <div class="videop">
+            <!--   <p >91自媒体<br>互联网+智慧管理云服务</p> -->
+              </div>
+               
+                 <a href="#" onclick="showPlayer()">
+                <div class="vi-poster">
+                    <img id="play-img" data-original="img/poster1.png" class="lazy">
+                </div>
+              </a>
+               <div id="91zmt-video-panel" style="display:none;"  class="91zmt-video" >
+                <video controls="controls" autoplay="autoplay" style="display:none;" width="640" height="480" id="91zmt-video"></video>
+               </div>  
+            </div>
+            <!--第二部分-->
+            
+            <div class="swiper-slide" id="s1"></div>
+            <div class="swiper-slide" id="s7"></div>
+            <div class="swiper-slide" id="s3"></div>
+            <div class="swiper-slide" id="s4"></div>
+            <div class="swiper-slide" id="s5"></div>
+            <div class="swiper-slide" id="s6"></div>
+          
+       </div>
+        <!-- Add Pagination右边点部分 -->
+        <div class="swiper-pagination swiper-pagination-clickable" style="display:none">
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet "> </span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+          <!--   <span class="swiper-pagination-bullet"></span> -->
+        </div>
+    </div>
+  </div>
+    
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+     <script src="assets/js/amazeui.min.js"></script>
+     <script type="text/javascript">
+        $('img.lazy').lazyload({
+           event : 'sporty'
+        });
+        console.log('smgdddddddddddddddddddddddddddd');
+        $(window).bind('load', function() {
+  var timeout = setTimeout(function() {
+    $('img.lazy').trigger('sporty');
+  }, 1000);
+});
+     </script>
+    <!-- Initialize Swiper -->
+    <script>
+      $(function(){
+//          $.ajax({
+//   url: "index2.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s1").html(html);
+//   }
+// });
+  
+//        $.ajax({
+//   url: "index3.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s7").html(html);
+//   }
+// });
+  
+//        $.ajax({
+//   url: "index4.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s3").html(html);
+//   }
+// });
+
+//         $.ajax({
+//   url: "index5.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s4").html(html);
+//   }
+// });
+//          $.ajax({
+//   url: "index6.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s5").html(html);
+//   }
+// });
+//           $.ajax({
+//   url: "index7.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s6").html(html);
+//   }
+// });
+  
+   setTimeout("$('.swiper-pagination').css('display','block')",1000);
+  
+          var id = '#a';
+          var $myOc = $(id);
+          $('.doc-oc-js').on('click', function() {
+            $myOc.offCanvas($(this).data('rel'));
+          });
+
+          $myOc.on('close.offcanvas.amui', function() {
+            console.log(id + '关闭了。');
+          });
+
+   $('swiper-pagination').css('display','block');
+
+    /* 第六页点击出二维码*/
+            $('.imgs').hover(function(){
+                $(this).find('.barcode').css('display', 'block');
+            },function(){
+                $(this).find('.barcode').css('display', 'none');
+            });
+             /* 第七页点击出二维码*/
+            $('.imgss').hover(function(){
+                $(this).find('.barcodes').css('display', 'block');
+            },function(){
+                $(this).find('.barcodes').css('display', 'none');
+            });
+
+            /*空格控制*/
+          $(document).keydown(function(e){  
+            if(!e) var e = window.event;   
+            if(e.keyCode==32){        
+                swiper.slideNext();
+
+             } 
+          });
+
+            /**
+            * 宽度高度计算
+            */
+                sz();
+              console.log('ss');
+              back1();
+              back2();
+              console.log('11111111');
+              size4();
+              console.log('22222222');
+              size2();
+              size3();
+              threepage();
+              fourpage();
+             $(window).resize(function(){
+              console.log('23244555');
+                 sz();
+                back2();
+                size4();
+                back1();
+                size2();
+                size3();
+                threepage();
+                fourpage();
+             });
+
+             var swiper1=new Swiper('.swiper-container-h',{
+                    pagination:'',
+                   nextButton:'.swiper-button-next',
+                    prevButton:'.swiper-button-prev',
+                    direction:'horizontal',
+                    loop : true,
+                  });
+             var swiper3=new Swiper('.swiper-container-hfour',{
+                pagination:'',
+                   nextButton:'.four-right',
+                    prevButton:'.four-left',
+                    direction:'horizontal',
+                    loop : true,
+              })
+             var swiper4=new Swiper('.swiper-container-hfive',{
+              pagination:'',
+                   nextButton:'.six-right',
+                    prevButton:'.six-left',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var swiper5=new Swiper('.swiper-container-hseven',{
+               pagination:'',
+                   nextButton:'.swiper-button-next',
+                    prevButton:'.swiper-button-prev',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var swipers=new Swiper('.swiper-container-hhs',{
+                  pagination:'',
+                   nextButton:'.three-right',
+                    prevButton:'.three-left',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var myswiper=new Swiper('.swiper-container-h1',{
+              pagination:'',
+              direction:'horizontal',
+              loop:true,
+              nextButton:'.one-right',
+              prevButton:'.one-left',
+             });
+             $('#left').click(function(){
+              myswiper.slidePrev();
+             })
+             $('#right').click(function(){
+              myswiper.slideNext();
+             })
+
+            var myswiper1=new Swiper('.swiper-container-h2',{
+             nextButton:'.five-right',
+              prevButton:'.five-left',
+              pagination:'',
+              direction:'horizontal',
+              loop:true,
+              // speed:1000,
+            });
+            $('#left5').click(function(){
+              myswiper1.slidePrev();
+
+            })
+            $('#right5').click(function(){
+              myswiper1.slideNext();
+            });
+            var myswiper2=new Swiper('.swiper-container-h3',{
+               pagination:'',
+              direction:'horizontal',
+              loop:true,
+            });
+            $('#left1').click(function(){
+              myswiper2.slidePrev();
+            })
+            $('#right1').click(function(){
+              myswiper2.slideNext();
+            })
+
+      });
+
+      function pageTwoaddClassAnimation() {
+                $('.third').addClass('third-animation');
+                $('.green').addClass('green-animation');
+                $('.ehouse').addClass('ehouse-animation');
+                $('.tree5').addClass('tree5-animation');
+                $('.smalltree').addClass('smalltree-animation');
+                $('.smalltree1').addClass('smalltree1-animation');
+                $('.tree1').addClass('tree1-animation');
+                $('.tree2').addClass('tree2-animation');
+                $('.mail').addClass('mail-animation');
+           }
+
+           function pageThirdaddClassAnimation() {
+               $('.tree').addClass('house2-animation');
+                $('.house1').addClass('house1-animation');
+                $('.house').addClass('house-animation');
+                $('.retail').addClass('retail-animation');
+                $('.jiameng').addClass('jiameng-animation');
+                $('.fsmalltree').addClass('fsmalltree-animation');
+                $('.fsmalltree1').addClass('fsmalltree1-animation');
+                $('.ftree1').addClass('ftree1-animation');
+                $('.ftree2').addClass('ftree2-animation');
+                $('.ftree5').addClass('ftree5-animation');
+                
+           }
+
+ 
+
+    var currentSlideIndex = 0;
+   
+    var swiper = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        slidesPerView : 1,
+        mousewheelControl:true,
+        watchSlidesProgress : true,
+        onProgress: function(swiper){
+           var s=6*swiper.progress;
+
+           console.log('s='+s);
+          currentSlideIndex = swiper.activeIndex;
+          console.log(swiper.activeIndex);
+          console.log(s);
+            if (s==3||s==5||s==6){
+            document.getElementById("icon").src="img/icon2.png";
+          }
+          else{
+            document.getElementById("icon").src="img/icon1.png";
+          }
+              
+           if (s == 0 || s == 2) {
+                $('.third').removeClass('third-animation');
+                $('.green').removeClass('green-animation');
+                $('.ehouse').removeClass('ehouse-animation');
+                $('.tree5').removeClass('tree5-animation');
+                $('.smalltree').removeClass('smalltree-animation');
+                $('.smalltree1').removeClass('smalltree1-animation');
+                $('.tree1').removeClass('tree1-animation');
+                $('.tree2').removeClass('tree2-animation');
+                $('.mail').removeClass('mail-animation');
+           }
+           if (s == 1 || s == 3) {
+                $('.tree').removeClass('house2-animation');
+                $('.house1').removeClass('house1-animation');
+                $('.house').removeClass('house-animation');
+                $('.retail').removeClass('retail-animation');
+                $('.jiameng').removeClass('jiameng-animation');
+                $('.fsmalltree').removeClass('fsmalltree-animation');
+                 $('.fsmalltree1').removeClass('fsmalltree1-animation');
+                 $('.ftree1').removeClass('ftree1-animation');
+                 $('.ftree2').removeClass('ftree2-animation');
+                 $('.ftree5').removeClass('ftree5-animation');
+           }
+          if(s==2){
+                $.ajax({
+                      url: "index4.html",
+                      cache: false,
+                      success: function(html){
+                        $("#s3").html(html);
+                      }
+                    });
+              }
+ if(s==3){
+   $.ajax({
+              url: "index5.html",
+              cache: false,
+              success: function(html){
+                $("#s4").html(html);
+              }
+            });
+
+ }
+if(s==4){
+  $.ajax({
+              url: "index6.html",
+              cache: false,
+              success: function(html){
+                $("#s5").html(html);
+              }
+            });
+}
+   
+     if(s==5){
+       $.ajax({
+              url: "index7.html",
+              cache: false,
+              success: function(html){
+                $("#s6").html(html);
+              }
+            });
+     }
+           if (s == 1) {
+                pageTwoaddClassAnimation();
+                 $.ajax({
+           url: "index2.html",
+        cache: false,
+       success: function(html){
+       $("#s1").html(html);
+      }
+      
+    });
+                 pageThirdaddClassAnimation();
+              $.ajax({
+           url: "index3.html",
+            cache: false,
+          success: function(html){
+          $("#s7").html(html);
+          }
+          }); 
+              
+       
+
+
+                console.log("000");
+           }
+            
+        }
+    });
+/*侧边栏滚动*/
+$('#btn1').click(function(){
+          swiper.slideTo(0,1000);
+           changeScreen('up');
+          $('#a').offCanvas('close'); 
+        })
+         $('#btn2').click(function(){
+          swiper.slideTo(1,1000); 
+           changeScreen('up');
+           $('#a').offCanvas('close');
+
+        })
+          $('#btn3').click(function(){
+          swiper.slideTo(2,1000); 
+           changeScreen('up');
+           $('#a').offCanvas('close');
+        })
+           $('#btn4').click(function(){
+          swiper.slideTo(3,1000); 
+           changeScreen('up');
+           $('#a').offCanvas('close');
+        })
+            $('#btn5').click(function(){
+          swiper.slideTo(4,1000);
+           changeScreen('up');
+           $('#a').offCanvas('close'); 
+        })
+             $('#btn6').click(function(){
+          swiper.slideTo(5,1000); 
+           changeScreen('up');
+           $('#a').offCanvas('close');
+        })
+              $('#btn7').click(function(){
+          swiper.slideTo(6,1000); 
+           changeScreen('up');
+           $('#a').offCanvas('close');
+        })
+               $('#btn8').click(function(){
+              swiper.slideTo(7,1000); 
+              $('#a').offCanvas('close');
+ 
+                    })
+              /*底部代码*/
+    var footerheight = $('.footer').height();
+      $('body').bind('mousewheel', function(event, delta) {
+
+            var dir = event.originalEvent.deltaY < 0 ? 'Up' : 'Down';
+                //vel = Math.abs(delta);
+                // alert(dir);
+           //console.log(dir);
+           if(dir=='Down' && currentSlideIndex==6){
+              changeScreen('down');
+           }else if(dir=='Up' && currentSlideIndex==6)
+           {
+             console.log('enyrin....');
+              changeScreen('Up');
+            }
+         
+        });
+    
+    function changeScreen(moveflag) {
+      if(moveflag=='down'){
+        $('#main-container').animate({
+            top:'-'+footerheight+'px'
+          }, 100);
+      }else{
+        $('#main-container').animate({
+            top:'+'+0+'px'
+          }, 100);
+      }
+     
+    }
+
+
+function size4(){
+  var h=$('#back').height();
+  console.log('h='+h);
+  var w=5*h/9+'px';
+  console.log('w='+w);
+  $('#back').width(w);
+}
+
+  function sz()
+                {
+       var h1=$('#ss').height();
+       var w1=255*h1/437+'px';
+      console.log('w1='+w1);
+       console.log('h1='+h1);
+                  }
+ 
+function back1(){
+  var x=$('#ba').height();
+  var y=59*x/111+'px';
+  $('#ba').width(y);
+}
+function threepage(){
+  var m=$('#threepage').height();
+  var n=206*m/277+'px';
+  $('#threepage').width(n);
+}
+
+function back2(){
+  var x1=$('#s2').height();
+  var y1=249*x1/439+'px';
+  $('#s2').width(y1);
+}
+ function size2(){
+  var s1=$('.imgs').width();
+  var s2=22*s1/21+'px';
+  $('.imgs').height(s2);
+ }
+ function size3(){
+  var t=$('.imgss').width();
+  var t1=23*t/22+'px';
+  $('.imgss').height(t1);
+ }
+ function fourpage(){
+  var f=$('.items').width();
+  console.log(f);
+  var f1=f+'px';
+  $('.items').height(f1);
+  console.log('kk');
+ }
+</script>
+<script type="text/javascript"> 
+        var ua = navigator.userAgent;
+        var deviceIsWindowsPhone = ua.indexOf("Windows Phone") >= 0;
+        var deviceIsAndroid = ua.indexOf('Android') > 0;
+        var deviceIsIOS = /iP(hone|od)/.test(ua);
+        if (deviceIsWindowsPhone || deviceIsAndroid || deviceIsIOS){
+         
+         
+          document.getElementById('css').href="css/style1.css";
+            var script = document.createElement('script');
+            script.src = 'js/mobile.js';
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+          document.getElementById('four-mobile').style.display="block";
+          document.getElementById('fivemobile').style.display="block";
+
+        }
+        else {
+            var script = document.createElement('script');
+            script.src = 'js/mobile.js';
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+            document.getElementById('css').href="css/style.css";
+          document.getElementById('four-pc').style.display="block";
+          document.getElementById('fivepc').style.display='block';
+              
+          window.location.href = "index.html";
+
+                  }
+        
+                 
+
+</script> 
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>微官网</title>
+  
+</head>
+<body >
+    <!--第三部分-->
+            <div  class="swiper-slide " style="background:#00a7e7" >
+              <div class="icon">
+                <img src="img/logo.png">
+              </div> 
+              <img src="img/house1.png" class="house-animation house opacity-zero">
+              <img src="img/emailouse.png" class="house1-animation house1 opacity-zero">
+              <img src="img/tree.png" class="house2-animation tree opacity-zero">
+              <img src="img/smalltree.png" class="fsmalltree-animation fsmalltree opacity-zero">
+              <img src="img/smalltree.png" class="fsmalltree1-animation fsmalltree1 opacity-zero">
+              <img src="img/tree1.png" class="ftree1-animation ftree1 opacity-zero">
+              <img src="img/tree2.png" class="ftree2-animation ftree2 opacity-zero">
+              <img src="img/tree5.png" class="ftree5-animation ftree5 opacity-zero">
+             <img src="img/mail.png" class="retail-animation retail opacity-zero">
+              <img src="img/cloud1.png" id="threecloud1">
+              <img src="img/cloud2.png" id="threecloud2">
+              <div class="bigtitle">服务包括</div>
+         <div class="swiper-container swiper-container-hhs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+             
+              <div class="smalltitle">策划推广</div>
+              <p class="ptitle">卓越创意配合强力执行。<br/>线上线下营销不间断。</p>
+              <div class="spic">
+              <!--    <img src="img/person1.png"  class="lazy"> -->
+              <img src="img/person11.gif">
+              </div>
+            </div>
+            <div class="swiper-slide"> 
+             
+              <div class="smalltitle">品牌传播</div>
+              <p class="ptitle">洞察调研，掌握先机，<br/>以顶尖思维驱动品牌传播策略。</p>
+              <div class="spic">
+               <!--   <img data-original="img/person2.png"  class="lazy"> -->
+              <img src="img/person22.gif">
+              </div>
+            </div>
+            <div class="swiper-slide">
+            
+              <div class="smalltitle">战略咨询</div>
+              <p class="ptitle">创建专属理念、行为、识别体系，<br/>打造顶级企业思维与执行标准。</p>
+              <div class="spic">
+                <!--  <img data-original="img/person3.png"  class="lazy"> -->
+              <img src="img/person33.gif">
+              </div>
+            </div>
+            <div class="swiper-slide"> 
+              
+              <div class="smalltitle">智慧景区</div>
+              <p class="ptitle">运用互联网及IT技术，<br/>全面提升景区服务、盈利、管理水平。</p>
+              <div class="spic">
+                 <!-- <img data-original="img/person4.png"  class="lazy"> -->
+              <img src="img/person44.gif">
+              </div>
+            </div>
+            <div class="swiper-slide"> 
+              
+              <div class="smalltitle">销售渠道</div>
+              <p class="ptitle">跨界共享经济时代，<br/>不断开拓新销路。</p>
+              <div class="spic">
+                <!--  <img data-original="img/person5.png"  class="lazy"> -->
+              <img src="img/person55.gif">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              
+              <div class="smalltitle">24小时客服</div>
+              <p class="ptitle">全年无忧贴心沟通好帮手</p>
+              <div class="spic">
+                <!--  <img data-original="img/person6.png"  class="lazy"> -->
+              <img src="img/person66.gif">
+              </div>
+            </div>
+        </div>
+        <!-- Add Arrows -->
+         <div class="three-right fourright" style="top:65%"><img src="img/whiteright.png"></div>
+        <div class="three-left forleft" style="top:65%"><img src="img/whiteleft.png"></div>
+    </div>
+    </div>
+
+   </body>
+     <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/amazeui.lazyload.js"></script>
+    <script src="js/swiper.min.js"></script>
+      <script type="text/javascript">
+        $('img.lazy').lazyload({
+           event : 'sporty'
+        });
+        console.log('smgdddddddddddddddddddddddddddd');
+        $(window).bind('load', function() {
+         var timeout = setTimeout(function() {
+        $('img.lazy').trigger('sporty');
+          }, 1000);
+        });
+     </script>
+    <script type="text/javascript">
+     var swipers=new Swiper('.swiper-container-hhs',{
+                  pagination:'',
+                   nextButton:'.three-right',
+                    prevButton:'.three-left',
+                    direction:'horizontal',
+                    loop : true,
+             })
+    </script>
+   
+ </html>
