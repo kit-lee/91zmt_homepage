@@ -6,22 +6,15 @@
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css" id="css"> 
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/echo.min.js"></script>
+    
    
-   <script src="js/jquer-mousewheel.min.js"></script>
     <!--amaze ui-->
    <meta name="renderer" content="webkit">
 
   <!-- No Baidu Siteapp-->
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
-
- 
-
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  
-
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -32,11 +25,51 @@
  
   <meta name="msapplication-TileColor" content="#0e90d2">
   <script src="assets/js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/amazeui.lazyload.js"></script>
+   <script src="js/jquer-mousewheel.min.js"></script>
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 
-<body style="overflow:hidden;">
+<body style="overflow:hidden;" >
+  <div id="wellcome" style="background:#00a6e7">
+<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+<tr>
+<form name=loading>
+<td align=center>
+<input type=text name=chart size="34" style="font-family:Arial;
+font-weight:bolder; color:#00a6e7;
+background-color:00a6e7; padding-left:4px; padding-right:4px; border-style:none; border:0">
+<br>
+<!--<input type=text name=percent size=46 style="font-family:Arial;
+color:gray; text-align:center;
+border-width:medium; border-style:none;">-->
+<script>
+var bar = 0
+var line = ""
+var amount =""
+count()
+function count(){
+bar= bar+2
+amount =amount + line
+document.loading.chart.value=amount
+/*document.loading.percent.value=bar+"%"*/
+if (bar<50)
+{setTimeout("count()",100);}
+else
+{
+
+$('#1').show();
+$('#wellcome').hide();
+}
+}
+</script>
+</p>
+</td>
+</form>
+</tr>
+</table>
+</div>
   <!--导航-->
   <header data-am-widget="header" class="am-header am-header-default">
     <div class="am-header-left am-header-nav">
@@ -75,410 +108,37 @@
   <div id="main-container" style="position: absolute; top:0;height:100%;width:100%">
     <!-- Swiper -->
     <div class="swiper-container swiper-container-v">
-        <div id="1" class="swiper-wrapper" >
+        <div id="1" class="swiper-wrapper" style="display:none" >
             <!--第一部分-->
-            <div class="swiper-slide " style="background:#00a7e7" >
+            <div class="swiper-slide " style="background:#00a6e7" >
               <div class="icon">
                 <img src="img/logo.png">
               </div> 
-              <img src="img/element2.png" class="element2 element2-animation">
-              <img src="img/element3.png" class="element3 element3-animation">
-              <img src="img/element4.png" class="element4 element4-animation">
-              <img src="img/element5.png" class="element5 element5-animation">
-              <img src="img/element2.png" class="element02 element02-animation">
-              <img src="img/element3.png" class="element03 element03-animation">
-              <img src="img/element4.png" class="element04 element04-animation">
-              <img src="img/element5.png" class="element05 element05-animation">
               <div class="videop">
-              <p >91自媒体<br>互联网+智慧管理云服务</p>
+            <!--   <p >91自媒体<br>互联网+智慧管理云服务</p> -->
               </div>
-              <a href="#" onclick="showPlayer()">
-              <div class="vi-poster">
-                 <img id="play-img" src="img/poster.png">
-              </div>
+               
+                 <a href="#" onclick="showPlayer()">
+                <div class="vi-poster">
+                    <img id="play-img" data-original="img/poster1.png" class="lazy">
+                </div>
               </a>
-              <div id="91zmt-video-panel" style="display:none;"  class="91zmt-video" >
+               <div id="91zmt-video-panel" style="display:none;"  class="91zmt-video" >
                 <video controls="controls" autoplay="autoplay" style="display:none;" width="640" height="480" id="91zmt-video"></video>
-              </div>
+               </div>  
             </div>
             <!--第二部分-->
-            <div  class="swiper-slide" style="background:#c42846" >
-              <div class="icon">
-                <img src="img/logo.png">
-              </div> 
-               <img src="img/cloud1.png" id="threecloud1">
-              <img src="img/cloud2.png" id="threecloud2">
-              <div class="bigtitle">系统介绍</div>
-              <div class="infolist1">
-                <li class="infoon1">微官网(APP)</li>
-                <li>智能导航导览系统</li>
-                <li>智能行程单</li>
-                <li>会员系统</li>
-                <li>在线移动支付</li>
-                <li>H5营销</li>
-                <li>酒店管理系统</li>          
-                <li>企业内部管理系统</li>
-                <li>大数据分析系统</li>
-                <li>供应链整合优化系统</li>
-                <li>在线电子票务</li>
-                <li>智慧餐厅</li>
-                <li>全网分销系统</li>
-              </div>
-              <div class="tlist" >
-                <li class="ton">企业移动互联战略实施基础必备</li>
-                <li>填补地图空白、快速发现身边乐趣</li>
-                <li>随时自主定制专属开心旅程</li>
-                <li>现代服务行业核心价值，企业推广运营必备基础</li>
-                <li>便捷支付刺激消费，快速处理降低成本，资金监管安全高效</li>
-                <li>多种互动方式，趣味动画，增强传播，移动跨平台传播</li>
-                <li>易用高效、扩展丰富、快速部署，无缝对接原有流程及分销，覆盖线下线下场景需求</li>
-                <li>营销、服务、管理、内务、人事等工作流程发布、优化、监督工具</li>
-                <li>数据驱动战略战术，企业拟定、执行及监督的决策标准</li>
-                <li>信息、商务、资金、物流、库存、决策流程整合优化。以更低成本、更高速度、创造更大价值</li>
-                <li>快速部署电子票务无缝对接原有步骤。提升游客买、验、检体验,优化财务流程</li>
-                <li>多种点餐出餐方式满足各种场景需求，便捷支付促进消费提升体验，智能处理，优化餐厅运营流程</li>
-                <li>线上线下各种分销代理快速接入、灵活调整价格政策、结算方式与信用关系</li>
-              </div> 
-             <img src="img/third.png" class="third-animation third opacity-zero">
-             <img src="img/green.png" class="green-animation green opacity-zero">
-             <img src="img/emailouse.png" class="ehouse-animation ehouse opacity-zero">
-             <img src="img/smalltree.png" class="smalltree-animation smalltree opacity-zero">
-             <img src="img/tree5.png" class="tree5-animation tree5  opacity-zero">
-             <img src="img/tree1.png" class="tree1-animation tree1 opacity-zero">
-             <img src="img/tree2.png" class="tree2-animation tree2 opacity-zero">
-             <img src="img/smalltree.png" class="smalltree1 opacity-zero common-class">
-             <img src="img/mail.png" class="mail-animation mail opacity-zero">
-             <div class="left" id="left"><img src="img/whiteleft.png"></div>
-             <div class="right" id="right"><img src="img/whiteright.png"></div>
-             <div class="back" style="z-index:1;">
-                <img src="img/phone.png" id="back">
-             </div>
-      <div class="swiper-container swiper-container-h1" id="ss"style="height:46%;top:15%">
-        <div class="swiper-wrapper" >
-          <div class="showd">
-            <li class="swiper-slide">
-              <img src="img/no11.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no22.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no33.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no44.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no55.jpg">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no66.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no88.jpg">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no77.jpg">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/no99.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/1010.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/1111.png">
-           </li>
-           <li class="swiper-slide">
-            <img src="img/1212.png">
-          </li>
-          <li class="swiper-slide">
-            <img src="img/no13.png">
-          </li>
-        </div>
-      </div>
-      </div>
-   </div>
-            <!--第三部分-->
-            <div  class="swiper-slide " style="background:#00a7e7" >
-              <div class="icon">
-                <img src="img/logo.png">
-              </div> 
-               <img src="img/house1.png" class="house-animation house opacity-zero">
-              <img src="img/emailouse.png" class="house1-animation house1 opacity-zero">
-              <img src="img/tree.png" class="house2-animation tree opacity-zero">
-              <img src="img/smalltree.png" class="fsmalltree-animation fsmalltree opacity-zero">
-              <img src="img/smalltree.png" class="fsmalltree1-animation fsmalltree1 opacity-zero">
-              <img src="img/tree1.png" class="ftree1-animation ftree1 opacity-zero">
-              <img src="img/tree2.png" class="ftree2-animation ftree2 opacity-zero">
-              <img src="img/tree5.png" class="ftree5-animation ftree5 opacity-zero">
-             <img src="img/mail.png" class="retail-animation retail opacity-zero">
-              <img src="img/cloud1.png" id="threecloud1">
-              <img src="img/cloud2.png" id="threecloud2">
-              <div class="bigtitle">服务包括</div>
-               <div class="infolist2">
-                <li class="infoon2">策划推广</li>
-                <li>品牌传播</li>
-                <li>战略咨询</li>
-                <li>智慧景区</li>
-                <li>销售渠道</li>
-                <li>24小时客服</li>
-              </div>
-              <div class="tlist4" >
-                <li class="ton4">卓越创意配合强力执行。线上线下营销不间断</li>
-                <li>洞察调研，掌握先机，以顶尖思维驱动品牌传播策略</li>
-                <li>创建专属理念、行为、识别体系，打造顶级企业思维与执行标准</li>
-                <li>运用互联网及IT技术，全面提升景区服务、盈利、管理水平</li>
-                <li>跨界共享经济时代，不断开拓新销路</li>
-                <li>全年无忧贴心沟通好帮手</li>
-              </div> 
-              <div class="left1" id="left1"><img src="img/whiteleft.png"></div>
-              <div class="right1" id="right1"><img src="img/whiteright.png"></div>
-               <div class="swiper-container swiper-container-h3" id="threepage" style="height:60%;top:19%">
-                <div class="swiper-wrapper">
-                  <div class="showd1">
-                  <li class="swiper-slide">
-                    <img src="img/person1.png">
-                  </li>
-                  <li class="swiper-slide">
-                    <img src="img/person2.png">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/person3.png">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/person4.png">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/person5.png">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/person6.png">
-                  </li>
-                  </div>      
-                </div>
-              </div>
-            </div>
-            <!--第四部分-->
-            <div  class="swiper-slide" style="z-index:100" style="background:#fff" >
-               <div class="icon">
-                <img src="img/logo.png">
-              </div> 
-              
-              <div class="title1"style="color:#000;left:0%">涵盖行业</div>
-              <div class="four-box">
-              <div class="items">
-                <img src="img/four1.png" class="item-img">
-                <div class="item">
-                  <span>景区</span><br/>
-                  <span>构建在线营销、服务、管理、供应链架构体系。全面提升游客满意度及服务水平。降低成本提升利润。
-                  </span>
-                </div>
-              </div>
-              <div class="items" >
-                 <img src="img/four6.png" class="item-img">
-                  <div class="item">
-                  <span>餐饮</span><br/>
-                  <span>营销引流、排号点餐、支付结账、进存销管、记账对账等，全程覆盖餐饮服务流程需求。</span>
-                  </div>
-              </div>
-              <div class="items">
-                <img src="img/four44.png" class="item-img">
-                  <div class="item">
-                    <span>酒店</span><br/>
-                  <span>让酒店进驻住客手机，智能感知并服务住客需求。无缝接入酒店各种系统，减去一切繁琐操作。让员工把精力放在服务深度与服务创新上。</span>
-                  </div> 
-              </div>
-              <div class="items" style="margin-top:5%">
-                <img src="img/four3.png" class="item-img">
-                  <div class="item">
-                  <span>连锁</span><br/>
-                  <span>线下连锁实体店加盟分销，快速铺点运营管理解决方案。</span>
-                  </div> 
-              </div>
-              <div class="items"  style="margin-top:5%">
-                 <img src="img/four22.png" class="item-img">
-                  <div class="item">
-                     <span>商场</span><br/>
-                     <span>实现会员、营销、服务、交易闭环体系。突破地域传播限制，多种引流营销不间断。</span>
-                  </div>
-              </div>
-              <div class="items"  style="margin-top:5%">
-                 <img src="img/four55.png" class="item-img">
-                  <div class="item">
-                    <span>零售</span><br/>
-                    <span>商户开店、营销引流、物流配送解决方案</span>
-                  </div>
-              </div>
-              </div>
-            </div>
-            <!--第五部分-->
-            <div  class="swiper-slide" style="background-image:url(img/fivebg.png);background-size:100%">
-            <div class="icon">
-                <img src="img/logo.png">
-              </div> 
-              <div class="bigtitle">版本选择</div>
-             <div class="infolist">
-             <li class="infoon">免费版</li>
-              <li>服务版</li>
-              <li>旗舰版</li>
-              <li>亲密合作版</li>
-              <li>股权合营版</li>
-              <li>战略合作版</li>
-            </div>
-             <div class="tlistfive" >
-                <li class="tonfive">商户自媒体营销利器</li>
-                <li>面向数字营销服务商的专属定制解决方案</li>
-                <li>面向六大行业商户的互联网+智慧管理整体解决方案</li>
-                <li>代运营服务（特许经营），让六大行业安心躺着赚</li>
-                <li>面向服务商或六大行业商户的技术入股服务形式。最高资源最大力量实现双赢</li>
-                <li>面向六大行业商户的销售分成双赢模式解决方案</li>
-              </div> 
-             <img src="img/start.png" class="start start-animation opacity-zero">
-             <img src="img/start.png" class="start1 start1-animation opacity-zero">
-             <img src="img/start.png" class="start2 start2-animation opacity-zero">
-             <img src="img/start.png" class="start3 start3-animation opacity-zero">
-             <img src="img/whiteleft.png" id="left5">
-             <img src="img/whiteright.png" id="right5">
-            <div class="back" >
-                <img src="img/phone.png" id="ba">
-              </div>
-              <div class="swiper-container swiper-container-h2" id="s2" style="height:46%;top:15%">
-                <div class="swiper-wrapper">
-                  <div class="showd5">
-                  <li class="swiper-slide">
-                    <img src="img/phone1-1.gif">
-                  </li>
-                  <li class="swiper-slide">
-                    <img src="img/phone2-1.gif">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/phone3-1.gif">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/phone4-1.gif">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/phone5-1.gif">
-                  </li>
-                   <li class="swiper-slide">
-                    <img src="img/phone6-1.gif">
-                  </li>
-                  </div>      
-                </div>
-              </div>
-      </div>
-           <!--第六部分-->
-                 <div  class="swiper-slide" style="background:#fff">
-              <div class="icon">
-                <img src="img/logo.png">
-              </div>     
-       <div class="swiper-container swiper-container-h">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide " data-hash="slide1" >
-              <div class="hh">景区</div>
-               <div class="imgs important">
-                <img src="img/scenic.jpg" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/11.jpg">
-                </div>
-
-                 <div class="scenic-tile">
-                 潮州绿岛景区
-                </div>
-                
-
-                <div class="case">
-                  案例详情
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide " data-hash="slide2" >
-              <p class="hh">餐饮</p>
-               <div class="imgs">
-                <img src="img/hall.gif" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/barcode.gif">
-                </div>
-                 <div class="scenic-tile">
-                  细蓉小馆
-                </div>
-                <div class="case">
-                  案例详情
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide" data-hash="slide3" >
-              <p class="hh">酒店</p>
-               <div class="imgs">
-                <img src="img/bighotel.jpg" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/11.jpg">
-                </div>
-                 <div class="scenic-tile">
-                 coming soon
-                </div>
-                 <div class="case">
-                 案例详情
-                </div>
-              </div>
-          </div>
-          <div class="swiper-slide" data-hash="slide4">
-            <p class="hh">连锁</p>
-             <div class="imgs">
-                <img src="img/dining.jpg" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/11.jpg">
-                </div>
-                 <div class="scenic-tile">
-                   coming soon
-                </div>
-                <div class="case">
-                 案例详情
-                </div>
-              </div>
-          </div>
-          <div class="swiper-slide" data-hash="slide5">
-            <p class="hh">商场</p>
-             <div class="imgs"> 
-                <img src="img/market.jpg" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/11.jpg">
-                </div>
-                 <div class="scenic-tile">
-                   coming soon
-                </div>
-                <div class="case">
-                  案例详情
-                </div>
-              </div>
-          </div>
-            <div class="swiper-slide" data-hash="slide6">
-              <p class="hh">零售</p>
-                <div class="imgs">
-                <img src="img/bigretail.jpg" class="imgs-bg">
-                <div class="barcode hide">
-                  <img src="img/11.jpg">
-                </div>
-                 <div class="scenic-tile">
-                   coming soon
-                </div>
-                <div class="case">
-                  案例详情
-                </div>
-              </div>
-          </div> 
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"><img src="img/fourright.png"></div>
-        <div class="swiper-button-prev"><img src="img/fourleft.png"></div>
-      </div> 
-</div>
-</div>
-
-      
+            
+            <div class="swiper-slide" id="s1"></div>
+            <div class="swiper-slide" id="s7"></div>
+            <div class="swiper-slide" id="s3"></div>
+            <div class="swiper-slide" id="s4"></div>
+            <div class="swiper-slide" id="s5"></div>
+            <div class="swiper-slide" id="s6"></div>
+          
+       </div>
         <!-- Add Pagination右边点部分 -->
-        <div class="swiper-pagination swiper-pagination-clickable">
+        <div class="swiper-pagination swiper-pagination-clickable" style="display:none">
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet "> </span>
             <span class="swiper-pagination-bullet"></span>
@@ -488,114 +148,88 @@
           <!--   <span class="swiper-pagination-bullet"></span> -->
         </div>
     </div>
-    <div id="foot" class="footer">
-      <div class="footle">
-          <div class="company">
-          <span class="titleb1">广州妙思电子科技有限公司</span>
-          </div>
-            <div class="foot1">
-             <img src="img/foot1.png" class="address"><span class="titleb" >im@muses.cc </span>
-            </div>
-            <div class="foot2">
-              <img src="img/foot2.png" class="tel"><span class="titleb" >020-83299311</span>
-            </div>
-            <div class="foot4">
-               <img src="img/foot4.png" class="com"><span class="titleb" >广州市越秀区大南路2号合润广场2603-05室</span>
-            </div>
-            <div class="foot5">
-               <img src="" class="email">
-              <span class="titleb" style="margin-left:70px">粤ICP备15004498号-1</span>
-            </div>
-         </div>
-         <div class="footmi">
-            <textarea id="liuyanban" minlength="10" maxlength="100" placeholder="请输入您的留言"></textarea>
-            <div class="submit">提交</div>
-        </div>
-            <img src="img/twoma.jpg"  class="footri">
-</div>
-</div>
+  </div>
     
     <!-- Swiper JS -->
     <script src="js/swiper.min.js"></script>
 
      <script src="assets/js/amazeui.min.js"></script>
-
+     <script type="text/javascript">
+        $('img.lazy').lazyload({
+           event : 'sporty'
+        });
+        console.log('smgdddddddddddddddddddddddddddd');
+        $(window).bind('load', function() {
+  var timeout = setTimeout(function() {
+    $('img.lazy').trigger('sporty');
+  }, 1000);
+});
+     </script>
     <!-- Initialize Swiper -->
-   <script>
-  
+    <script>
       $(function(){
-         $(document).on('click', '#play-img', function(){
-               var html='<iframe height=\'400\' width=\'500\' src=\"http://player.youku.com/embed/XMTMwMDE1MDk2MA==?isAutoPlay=true\" frameborder=0 allowfullscreen id=\"video1\" ></iframe>';
-             
-              $('.vi-poster').html(html);
-             
-              $(this).css('display', 'none');
-             var docm,rqst;
-             docm=document.getElementById("video1");
-             rqst=docm.requestFullScreen||docm.webkitRequestFullScreen||docm.mozRequestFullScreen || docm.msRequestFullScreen;
-             if(typeof rqst!="undefined" && rqst){
-              rqst.call(docm);
-           }
+//          $.ajax({
+//   url: "index2.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s1").html(html);
+//   }
+// });
+  
+//        $.ajax({
+//   url: "index3.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s7").html(html);
+//   }
+// });
+  
+//        $.ajax({
+//   url: "index4.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s3").html(html);
+//   }
+// });
+
+//         $.ajax({
+//   url: "index5.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s4").html(html);
+//   }
+// });
+//          $.ajax({
+//   url: "index6.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s5").html(html);
+//   }
+// });
+//           $.ajax({
+//   url: "index7.html",
+//   cache: false,
+//   success: function(html){
+//     $("#s6").html(html);
+//   }
+// });
+  
+   setTimeout("$('.swiper-pagination').css('display','block')",1000);
+   setTimeout('')
+  
+          var id = '#a';
+          var $myOc = $(id);
+          $('.doc-oc-js').on('click', function() {
+            $myOc.offCanvas($(this).data('rel'));
           });
 
-          var id = '#a';
-    var $myOc = $(id);
-    $('.doc-oc-js').on('click', function() {
-      $myOc.offCanvas($(this).data('rel'));
-    });
+          $myOc.on('close.offcanvas.amui', function() {
+            console.log(id + '关闭了。');
+          });
 
-    $myOc.on('close.offcanvas.amui', function() {
-      console.log(id + '关闭了。');
-    });
+   $('swiper-pagination').css('display','block');
 
-    
-
-            /*空格控制*/
- $(document).keydown(function(e){  
-    if(!e) var e = window.event;   
-    if(e.keyCode==32){        
- swiper.slideNext();
-
-  } 
-});
-
-/**
-* 宽度高度计算
-*/
-  sz();
-  back1();
-  back2();
-  console.log('11111111');
-  size4();
-  console.log('22222222');
-  size2();
-  size3();
-  threepage();
-  fourpage();
-   sizzsix();
-   twoma();
- $(window).resize(function(){
-  console.log('23244555');
-    sz();
-    back2();
-    size4();
-    back1();
-    size2();
-    size3();
-    threepage();
-    fourpage();
-     sizzsix();
-     twoma();
- });
-
- var swiper1=new Swiper('.swiper-container-h',{
-        pagination:'',
-       nextButton:'.swiper-button-next',
-        prevButton:'.swiper-button-prev',
-        direction:'horizontal',
-        loop : true,
-      });
- /* 第六页点击出二维码*/
+    /* 第六页点击出二维码*/
             $('.imgs').hover(function(){
                 $(this).find('.barcode').css('display', 'block');
             },function(){
@@ -607,42 +241,117 @@
             },function(){
                 $(this).find('.barcodes').css('display', 'none');
             });
- var myswiper=new Swiper('.swiper-container-h1',{
-  pagination:'',
-  direction:'horizontal',
-  loop:true,
- });
- $('#left').click(function(){
-  myswiper.slidePrev();
- })
- $('#right').click(function(){
-  myswiper.slideNext();
- })
 
-var myswiper1=new Swiper('.swiper-container-h2',{
-  pagination:'',
-  direction:'horizontal',
-  loop:true,
-  speed:50,
-});
-$('#left5').click(function(){
-  myswiper1.slidePrev();
+            /*空格控制*/
+          $(document).keydown(function(e){  
+            if(!e) var e = window.event;   
+            if(e.keyCode==32){        
+                swiper.slideNext();
 
-})
-$('#right5').click(function(){
-  myswiper1.slideNext();
-});
-var myswiper2=new Swiper('.swiper-container-h3',{
-   pagination:'',
-  direction:'horizontal',
-  loop:true,
-});
-$('#left1').click(function(){
-  myswiper2.slidePrev();
-})
-$('#right1').click(function(){
-  myswiper2.slideNext();
-})
+             } 
+          });
+
+            /**
+            * 宽度高度计算
+            */
+                sz();
+              console.log('ss');
+              back1();
+              back2();
+              console.log('11111111');
+              size4();
+              console.log('22222222');
+              size2();
+              size3();
+              threepage();
+              fourpage();
+             $(window).resize(function(){
+              console.log('23244555');
+                 sz();
+                back2();
+                size4();
+                back1();
+                size2();
+                size3();
+                threepage();
+                fourpage();
+             });
+
+             var swiper1=new Swiper('.swiper-container-h',{
+                    pagination:'',
+                   nextButton:'.swiper-button-next',
+                    prevButton:'.swiper-button-prev',
+                    direction:'horizontal',
+                    loop : true,
+                  });
+             var swiper3=new Swiper('.swiper-container-hfour',{
+                pagination:'',
+                   nextButton:'.four-right',
+                    prevButton:'.four-left',
+                    direction:'horizontal',
+                    loop : true,
+              })
+             var swiper4=new Swiper('.swiper-container-hfive',{
+              pagination:'',
+                   nextButton:'.six-right',
+                    prevButton:'.six-left',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var swiper5=new Swiper('.swiper-container-hseven',{
+               pagination:'',
+                   nextButton:'.swiper-button-next',
+                    prevButton:'.swiper-button-prev',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var swipers=new Swiper('.swiper-container-hhs',{
+                  pagination:'',
+                   nextButton:'.three-right',
+                    prevButton:'.three-left',
+                    direction:'horizontal',
+                    loop : true,
+             })
+             var myswiper=new Swiper('.swiper-container-h1',{
+              pagination:'',
+              direction:'horizontal',
+              loop:true,
+              nextButton:'.one-right',
+              prevButton:'.one-left',
+             });
+             $('#left').click(function(){
+              myswiper.slidePrev();
+             })
+             $('#right').click(function(){
+              myswiper.slideNext();
+             })
+
+            var myswiper1=new Swiper('.swiper-container-h2',{
+             nextButton:'.five-right',
+              prevButton:'.five-left',
+              pagination:'',
+              direction:'horizontal',
+              loop:true,
+              // speed:1000,
+            });
+            $('#left5').click(function(){
+              myswiper1.slidePrev();
+
+            })
+            $('#right5').click(function(){
+              myswiper1.slideNext();
+            });
+            var myswiper2=new Swiper('.swiper-container-h3',{
+               pagination:'',
+              direction:'horizontal',
+              loop:true,
+            });
+            $('#left1').click(function(){
+              myswiper2.slidePrev();
+            })
+            $('#right1').click(function(){
+              myswiper2.slideNext();
+            })
 
       });
 
@@ -659,7 +368,7 @@ $('#right1').click(function(){
            }
 
            function pageThirdaddClassAnimation() {
-                $('.tree').addClass('house2-animation');
+               $('.tree').addClass('house2-animation');
                 $('.house1').addClass('house1-animation');
                 $('.house').addClass('house-animation');
                 $('.retail').addClass('retail-animation');
@@ -675,17 +384,7 @@ $('#right1').click(function(){
  
 
     var currentSlideIndex = 0;
-    $('#btn8').click(function(){
- swiper.slideTo(6,1000);
-     
-changeScreen('down');
- 
-
-
-/*setTimeout('changeScreen('down')', 2000);*/
-
-  $('#a').offCanvas('close'); 
- })
+   
     var swiper = new Swiper('.swiper-container-v', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -694,11 +393,13 @@ changeScreen('down');
         mousewheelControl:true,
         watchSlidesProgress : true,
         onProgress: function(swiper){
-           var s=5*swiper.progress;
+           var s=6*swiper.progress;
+
+           console.log('s='+s);
           currentSlideIndex = swiper.activeIndex;
           console.log(swiper.activeIndex);
           console.log(s);
-            if (s==3||s==5){
+            if (s==3||s==5||s==6){
             document.getElementById("icon").src="img/icon2.png";
           }
           else{
@@ -728,14 +429,67 @@ changeScreen('down');
                  $('.ftree2').removeClass('ftree2-animation');
                  $('.ftree5').removeClass('ftree5-animation');
            }
+          if(s==2){
+                $.ajax({
+                      url: "index4.html",
+                      cache: false,
+                      success: function(html){
+                        $("#s3").html(html);
+                      }
+                    });
+              }
+ if(s==3){
+   $.ajax({
+              url: "index5.html",
+              cache: false,
+              success: function(html){
+                $("#s4").html(html);
+              }
+            });
+
+ }
+if(s==4){
+  $.ajax({
+              url: "index6.html",
+              cache: false,
+              success: function(html){
+                $("#s5").html(html);
+              }
+            });
+}
+   
+     if(s==5){
+       $.ajax({
+              url: "index7.html",
+              cache: false,
+              success: function(html){
+                $("#s6").html(html);
+              }
+            });
+     }
            if (s == 1) {
                 pageTwoaddClassAnimation();
+                 $.ajax({
+           url: "index2.html",
+        cache: false,
+       success: function(html){
+       $("#s1").html(html);
+      }
+      
+    });
                 
+              $.ajax({
+           url: "index3.html",
+            cache: false,
+          success: function(html){
+          $("#s7").html(html);
+          }
+          }); 
                 console.log("000");
            }
-          if (s == 2) {
-              pageThirdaddClassAnimation();
-           }             
+            if(s==2){
+               pageThirdaddClassAnimation();
+            }
         }
     });
 /*侧边栏滚动*/
@@ -775,6 +529,11 @@ $('#btn1').click(function(){
            changeScreen('up');
            $('#a').offCanvas('close');
         })
+               $('#btn8').click(function(){
+              swiper.slideTo(7,1000); 
+              $('#a').offCanvas('close');
+ 
+                    })
               /*底部代码*/
     var footerheight = $('.footer').height();
       $('body').bind('mousewheel', function(event, delta) {
@@ -783,9 +542,9 @@ $('#btn1').click(function(){
                 //vel = Math.abs(delta);
                 // alert(dir);
            //console.log(dir);
-           if(dir=='Down' && currentSlideIndex==5){
+           if(dir=='Down' && currentSlideIndex==6){
               changeScreen('down');
-           }else if(dir=='Up' && currentSlideIndex==5)
+           }else if(dir=='Up' && currentSlideIndex==6)
            {
              console.log('enyrin....');
               changeScreen('Up');
@@ -806,118 +565,6 @@ $('#btn1').click(function(){
      
     }
 
- /*第五页*/
-var curIndex=0;
-imglen=$('.swiper-wrapper .showd5 li').length;
-$('#left5').click(function(){
- curIndex=(curIndex>0)?(--curIndex):(imglen-1);
-  changeTo(curIndex, 'left1');
-})
-$('#right5').click(function(){
- curIndex=(curIndex<imglen-1)?(++curIndex):0;
-  changeTo(curIndex, 'right1');
-})
-function changeTo(num,flag){
-  var fivew=$('.showd5').width();
-    var goleft=fivew*num + 'px';
-    if (flag == 'left1') {
-        $('.showd5').animate({left:'-'+goleft},300, function(){
-            var $dome = $('.showd5').children('li').last();
-            console.log('123132.......');
-            $('.showd5').children('li').first().before($dome);
-            $('.showd5').css('left', 0);
-        });
-       $('.infolist').find('li').removeClass('infoon').eq(num).addClass('infoon');
-        $('.tlistfive').find('li').removeClass('tonfive').eq(num).addClass('tonfive');
-        return false;
-        console.log('lll');
-    }
-    if (flag = 'right1') {
-      $('.showd5').animate({left:'-'+goleft},300, function(){
-        $('.showd5').children('li').last().after($('.showd5').children('li').first());
-        $('.showd5').css('left', 0);
-      });
-      $('.infolist').find('li').removeClass('infoon').eq(num).addClass('infoon');
-      $('.tlistfive').find('li').removeClass('tonfive').eq(num).addClass('tonfive');
-      return false;
-    }   
-}
-/*第二页*/
-var ccIndex=0;
-imgleng=$('.swiper-wrapper .showd li').length;
-$('#left').click(function(){
- ccIndex=(ccIndex>0)?(--ccIndex):(imgleng-1);
-  changeTo1(ccIndex, 'left');
-})
-$('#right').click(function(){
- ccIndex=(ccIndex<imgleng-1)?(++ccIndex):0;
-  changeTo1(ccIndex, 'right');
-})
-function changeTo1(num,flag){
-  var secondw=$('.showd').width();
-    var go=secondw*num + 'px';
-    if (flag == 'left') {
-        $('.showd').animate({left:'-'+go},300, function(){
-            var $dom = $('.showd').children('li').last();
-            console.log($dom);
-            console.log('123132.......');
-            $('.showd').children('li').first().before($dom);
-            $('.showd').css('left', 0);
-        });
-        $('.infolist1').find('li').removeClass('infoon1').eq(num).addClass('infoon1');
-        $('.tlist').find('li').removeClass('ton').eq(num).addClass('ton');
-         $('.tdetail').find('li').removeClass('tdetails').eq(num).addClass('tdetails');
-        console.log('kkk');
-        return false;
-    }
-    if (flag = 'right') {
-      $('.showd').animate({left:'-'+go},300, function(){
-        $('.showd').children('li').last().after($('.showd').children('li').first());
-        $('.showd').css('left', 0);
-      });
-      $('.infolist1').find('li').removeClass('infoon1').eq(num).addClass('infoon1');
-      $('.tlist').find('li').removeClass('ton').eq(num).addClass('ton');
-       $('.tdetail').find('li').removeClass('tdetails').eq(num).addClass('tdetails');
-      return false;
-    }
-    
-}
-/*第三页*/
-var cIndex=0;
-imgle=$('.swiper-wrapper .showd1 li').length;
-$('#left1').click(function(){
- cIndex=(cIndex>0)?(--cIndex):(imgle-1);
-  changeTo2(cIndex, 'leftj');
-})
-$('#right1').click(function(){
- cIndex=(cIndex<imgle-1)?(++cIndex):0;
-  changeTo2(cIndex, 'rightj');
-})
-function changeTo2(num,flag){
-  var threew=$('.showd1').width();
-    var goleft1=threew*num + 'px';
-    if (flag == 'leftj') {
-        $('.showd1').animate({left:'-'+goleft1},300, function(){
-            var $domeq = $('.showd1').children('li').last();
-            console.log('123132.......');
-            $('.showd1').children('li').first().before($domeq);
-            $('.showd1').css('left', 0);
-        });
-      $('.infolist2').find('li').removeClass('infoon2').eq(num).addClass('infoon2');
-       $('.tlist4').find('li').removeClass('ton4').eq(num).addClass('ton4');
-        return false;
-        console.log('lll');
-    }
-    if (flag = 'rightj') {
-      $('.showd1').animate({left:'-'+goleft1},300, function(){
-        $('.showd1').children('li').last().after($('.showd1').children('li').first());
-        $('.showd1').css('left', 0);
-      });
-     $('.infolist2').find('li').removeClass('infoon2').eq(num).addClass('infoon2');
-      $('.tlist4').find('li').removeClass('ton4').eq(num).addClass('ton4');
-      return false;
-    }   
-}
 
 function size4(){
   var h=$('#back').height();
@@ -927,18 +574,18 @@ function size4(){
   $('#back').width(w);
 }
 
+  function sz()
+                {
+       var h1=$('#ss').height();
+       var w1=255*h1/437+'px';
+      console.log('w1='+w1);
+       console.log('h1='+h1);
+                  }
  
- function sz()
-{
-  var h1=$('#ss').height();
-  var w1=255*h1/437+'px';
-  $('#ss').width(w1);
-}
-
 function back1(){
-  var x=$('#ba').height();
-  var y=5*x/9+'px';
-  $('#ba').width(y);
+  var x=$('.mobile').height();
+  var y=59*x/111+'px';
+  $('.mobile').width(y);
 }
 function threepage(){
   var m=$('#threepage').height();
@@ -947,54 +594,60 @@ function threepage(){
 }
 
 function back2(){
-  var x1=$('#s2').height();
-  var y1=255*x1/437+'px';
-  $('#s2').width(y1);
+  var x1=$('.mobile-content').height();
+  var y1=249*x1/439+'px';
+  $('.mobile-content').width(y1);
 }
-
  function size2(){
   var s1=$('.imgs').width();
-  var s2=s1+'px';
+  var s2=22*s1/21+'px';
   $('.imgs').height(s2);
-  console.log('s1='+s1);
-  console.log('s2='+s2);
  }
  function size3(){
   var t=$('.imgss').width();
   var t1=23*t/22+'px';
   $('.imgss').height(t1);
  }
- function sizzsix(){
-  var ss=$('.imgs-bg').height();
-  var ss1=ss+'px';
-  $('.imgs-bg').width(ss1);
- }
- function twoma(){
-  var code=$('.barcode').height();
-  var code1=code+'px';
-  $('.barcode').width(code);
- }
  function fourpage(){
   var f=$('.items').width();
+  console.log(f);
   var f1=f+'px';
   $('.items').height(f1);
   console.log('kk');
  }
 </script>
 <script type="text/javascript"> 
- var ua = navigator.userAgent;
+        var ua = navigator.userAgent;
         var deviceIsWindowsPhone = ua.indexOf("Windows Phone") >= 0;
         var deviceIsAndroid = ua.indexOf('Android') > 0;
         var deviceIsIOS = /iP(hone|od)/.test(ua);
         if (deviceIsWindowsPhone || deviceIsAndroid || deviceIsIOS){
-          document.getElementById('css').href="css/style1.css";
          
-        window.location.href = "index1.html";
+         
+          document.getElementById('css').href="css/style1.css";
+            var script = document.createElement('script');
+            script.src = 'js/mobile.js';
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+          document.getElementById('four-mobile').style.display="block";
+          document.getElementById('fivemobile').style.display="block";
+
         }
         else {
-          document.getElementById('css').href="css/style.css";
-          
-        }
+            var script = document.createElement('script');
+            script.src = 'js/mobile.js';
+            var head = document.getElementsByTagName('head')[0];
+            head.appendChild(script);
+            document.getElementById('css').href="css/style.css";
+          document.getElementById('four-pc').style.display="block";
+          document.getElementById('fivepc').style.display='block';
+              
+          window.location.href = "index.html";
+
+                  }
+        
+                 
+
 </script> 
 </body>
 </html>
