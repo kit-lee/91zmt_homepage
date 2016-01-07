@@ -39,20 +39,20 @@
 <td align=center>
 <input type=text name=chart size="34" style="font-family:Arial;
 font-weight:bolder; color:#00a6e7;
-background-color:00a6e7; padding-left:4px; padding-right:4px; border-style:none; border:0">
+background-color:#00a6e7; padding-left:4px; padding-right:4px; border-style:none; border:0">
 <br>
 <!--<input type=text name=percent size=46 style="font-family:Arial;
 color:gray; text-align:center;
 border-width:medium; border-style:none;">-->
 <script>
-var bar = 0
-var line = ""
-var amount =""
-count()
+var bar = 0;
+var line = "";
+var amount ="";
+count();
 function count(){
-bar= bar+2
-amount =amount + line
-document.loading.chart.value=amount
+bar= bar+2;
+amount =amount + line;
+document.loading.chart.value=amount;
 /*document.loading.percent.value=bar+"%"*/
 if (bar<50)
 {setTimeout("count()",100);}
@@ -282,42 +282,42 @@ $('#wellcome').hide();
                    nextButton:'.swiper-button-next',
                     prevButton:'.swiper-button-prev',
                     direction:'horizontal',
-                    loop : true,
+                    loop : true
                   });
              var swiper3=new Swiper('.swiper-container-hfour',{
                 pagination:'',
                    nextButton:'.four-right',
                     prevButton:'.four-left',
                     direction:'horizontal',
-                    loop : true,
+                    loop : true
               })
              var swiper4=new Swiper('.swiper-container-hfive',{
               pagination:'',
                    nextButton:'.six-right',
                     prevButton:'.six-left',
                     direction:'horizontal',
-                    loop : true,
+                    loop : true
              })
              var swiper5=new Swiper('.swiper-container-hseven',{
                pagination:'',
                    nextButton:'.swiper-button-next',
                     prevButton:'.swiper-button-prev',
                     direction:'horizontal',
-                    loop : true,
+                    loop : true
              })
              var swipers=new Swiper('.swiper-container-hhs',{
                   pagination:'',
                    nextButton:'.three-right',
                     prevButton:'.three-left',
                     direction:'horizontal',
-                    loop : true,
+                    loop : true
              })
              var myswiper=new Swiper('.swiper-container-h1',{
               pagination:'',
               direction:'horizontal',
               loop:true,
               nextButton:'.one-right',
-              prevButton:'.one-left',
+              prevButton:'.one-left'
              });
              $('#left').click(function(){
               myswiper.slidePrev();
@@ -331,7 +331,7 @@ $('#wellcome').hide();
               prevButton:'.five-left',
               pagination:'',
               direction:'horizontal',
-              loop:true,
+              loop:true
               // speed:1000,
             });
             $('#left5').click(function(){
@@ -344,7 +344,7 @@ $('#wellcome').hide();
             var myswiper2=new Swiper('.swiper-container-h3',{
                pagination:'',
               direction:'horizontal',
-              loop:true,
+              loop:true
             });
             $('#left1').click(function(){
               myswiper2.slidePrev();
