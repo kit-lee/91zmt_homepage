@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/index.css"/>
     <style>
-        .zz{
-            position: absolute;
-        }
+        .zz {position: absolute;}
+        #loadingDiv{margin:0 auto;position:fixed;_position:absolute;top:40%;left:43%;width:120px;height:120px;overflow:hidden;background:url(img/loading.gif) no-repeat;z-index:10;}
+        #loading_bg{background-color:#58a1d1;position:absolute;height:100%;width:100%;z-index:317;opacity:0.9}
     </style>
+    <script type="text/javascript">
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading(){
+            if(document.readyState == "complete"){
+                var loadingMask = document.getElementById('loading_bg');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
 </head>
 <body style=" background-color: #D8EEEB;">
+<div id="loading_bg">
+    <div id="loadingDiv"></div>
+</div>
 <div id="fullpage" style="background-color: #D8EEEB;">
     <div class="section am-bg-a" style="width: 100%;height: 100%;">
         <img src="img/mob_00.jpg" width="100%" height="100%" alt=""/>
@@ -25,7 +38,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_1_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_1_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -35,8 +48,8 @@
         </div>
         <div class="am-g zz" style="bottom:10%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_1_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_1_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -44,7 +57,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_2_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_2_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -54,8 +67,8 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_2_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_2_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -64,7 +77,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_3_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_3_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -74,8 +87,8 @@
         </div>
         <div class="am-g zz" style="bottom:3%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_3_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_3_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -84,7 +97,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_4_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_4_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -94,8 +107,8 @@
         </div>
         <div class="am-g zz" style="bottom:5%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_4_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_4_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -104,7 +117,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_5_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_5_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -114,7 +127,7 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_5_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -124,7 +137,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_6_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_6_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -134,8 +147,8 @@
         </div>
         <div class="am-g zz" style="bottom:6%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_6_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_6_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -144,7 +157,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_7_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_7_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -154,8 +167,8 @@
         </div>
         <div class="am-g zz" style="bottom:6%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_7_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_7_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -164,7 +177,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_8_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_8_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -174,8 +187,8 @@
         </div>
         <div class="am-g zz" style="bottom:8%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_8_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_8_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -184,7 +197,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_9_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_9_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -194,7 +207,7 @@
         </div>
         <div class="am-g zz" style="bottom:1%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_9_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -204,7 +217,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_10_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_10_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -214,8 +227,8 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_10_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_10_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -224,7 +237,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_11_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_11_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -234,7 +247,7 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_11_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -244,7 +257,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_12_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_12_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -254,8 +267,8 @@
         </div>
         <div class="am-g zz" style="bottom:10%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_12_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_12_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -264,7 +277,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_13_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_13_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -274,8 +287,8 @@
         </div>
         <div class="am-g zz" style="bottom:3%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_13_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_13_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -284,7 +297,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_14_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_14_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -294,8 +307,8 @@
         </div>
         <div class="am-g zz" style="bottom:4%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_14_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_14_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
@@ -304,7 +317,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_15_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_15_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -314,7 +327,7 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_15_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -324,7 +337,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_16_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_16_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -334,7 +347,7 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_16_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -344,7 +357,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 2%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_17_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_17_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 17%">
@@ -354,7 +367,7 @@
         </div>
         <div class="am-g zz" style="bottom:1%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_17_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -365,7 +378,7 @@
     <div class="section" style="width: 100%;height: 100%">
         <div class="am-g zz" style="top: 5%">
             <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_18_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+                <img src="img/images/img_18_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="top: 28%">
@@ -375,15 +388,12 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_18_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_18_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
-
-
-
 
 
     <div class="section am-bg-a" style="width: 100%;height: 100%;">
@@ -391,7 +401,9 @@
     </div>
     <div class="section am-bg-a" style="width: 100%;height: 100%;">
         <img src="img/mob_21.jpg" width="100%" height="100%" alt=""/>
-        <div class="zz" style="bottom: 0%;text-align: center;color: #3E3636;">&nbsp;<span> &copy;  2016 妙思科技  Muses technology.co.td<br/>im@muses.cc</span></div>
+
+        <div class="zz" style="bottom: 0%;text-align: center;color: #3E3636;">&nbsp;<span> &copy; 2016 妙思科技  Muses technology.co.td<br/>im@muses.cc</span>
+        </div>
     </div>
 </div>
 </body>
@@ -403,9 +415,10 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <script src="js/jquery.fullpage.js"></script>
+<script src="js/wx.js"></script>
 <script>
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 //        var Images = '';
 //        for(var i=0;i<22;i++){
 //              Images+='<div class="section"  style="width: 100%;height: 100%;"><img alt="" width="100%" height="100%"/></div>';
@@ -419,12 +432,70 @@
 //                return this.src = "img/mob_"+i+".jpg";
 //            }
 //        });
+        //转码 分享到微信朋友圈的时候
+        function urlEncoding(pageUrl) {
+            while (pageUrl.indexOf(":") > -1 || pageUrl.indexOf("/") > -1 ||
+            pageUrl.indexOf("?") > -1 || pageUrl.indexOf("=") > -1 ||
+            pageUrl.indexOf("&") > -1) {
+                pageUrl = pageUrl.replace(":", "%3a");
+                pageUrl = pageUrl.replace("/", "%2f");
+                pageUrl = pageUrl.replace("?", "%3f");
+                pageUrl = pageUrl.replace("=", "%3d");
+                pageUrl = pageUrl.replace("&", "%26");
+            }
+            return pageUrl;
+        }
 
+//微信分享功能
+        var wx_config = null;
+        $.ajax({
+            url: "http://weixin.91zmt.com/jsapi/configjson?webcode=czldly&url=" + urlEncoding('http://m.91zmt.com/2016') + "&apis=onMenuShareAppMessage,onMenuShareTimeline&debug=true",
+            type: "GET",
+            dataType: "JSON",
+            async: false,
+            cache: false,
+            success: function (data) {
+                console.log(data);
+                wx_config = data;
+            },
+            error: function () {
+            }
+        });
 
-
+        wx.config(wx_config);
+        wx.ready(function () {
+//分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: '91自媒体系统功能介绍', // 分享标题
+                link: '91zmt.com', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function (data) {
+                    alert('ok');
+                },
+                cancel: function () {
+                    alert('cancel');
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+//分享给朋友
+            wx.onMenuShareAppMessage({
+                title: '91自媒体系统功能介绍', // 分享标题
+                desc: '一站式在线旅游服务平台', // 分享描述
+                link: 'http://m.91zmt.com/2016', // 分享链接
+                imgUrl: '', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        })
 
         //满屏翻页
-        $(function(){
+        $(function () {
             $("#fullpage").fullpage();
         });
     });
