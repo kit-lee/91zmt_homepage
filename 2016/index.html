@@ -8,204 +8,239 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/index.css"/>
     <style>
-        .zz{
-            position: absolute;
-        }
+        /*@media screen and (max-height: 300px) {*/
+            /*.am-u-sm-10 img{*/
+
+            /*}*/
+        /*}*/
     </style>
+    <script type="text/javascript">
+        document.onreadystatechange = completeLoading;
+        //加载状态为complete时移除loading效果
+        function completeLoading(){
+            if(document.readyState == "complete"){
+                var loadingMask = document.getElementById('loading_bg');
+                loadingMask.parentNode.removeChild(loadingMask);
+            }
+        }
+    </script>
 </head>
 <body style=" background-color: #D8EEEB;">
-<div id="fullpage" style="background-color: #D8EEEB;">
-    <div class="section am-bg-a" style="width: 100%;height: 100%;">
+<div id="loading_bg">
+    <div id="loadingDiv"></div>
+</div>
+<div id="fullpage" style="background-color: #d8eeeb;">
+    <div class="section am-bg-a">
         <img src="img/mob_00.jpg" width="100%" height="100%" alt=""/>
     </div>
-    <div class="section am-bg-a" style="width: 100%;height: 100%;">
+    <div class="section am-bg-a">
         <img src="img/mob_01.jpg" width="100%" height="100%" alt=""/>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_1_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_1_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_1_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:10%; ">
+        <div class="am-g zz" style="bottom:2%;">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_1_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_1_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_2_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_2_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_2_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:2%; ">
+        <div class="am-g zz" style="bottom:2%;">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_2_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_2_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_3_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_3_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_3_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:3%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_3_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_3_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_4_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_4_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_4_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:5%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_4_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_4_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_5_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_5_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 17%">
+        <div class="am-g zz" style="top:20%">
             <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_5_2.jpg" width="50%" alt=""/>
+                <img class="am-changtu" src="img/images/img_5_2.jpg" width="50%" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_5_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_6_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_6_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_6_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:6%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_6_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_6_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_7_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_7_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_7_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:6%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_7_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_7_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_8_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_8_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_8_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:8%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_8_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_8_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_9_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_9_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 17%">
+        <div class="am-g zz" style="top: 19%">
             <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_9_2.jpg" width="42%" alt=""/>
+                <img class="am-changtu" src="img/images/img_9_2.jpg" width="42%" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="bottom:1%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_9_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_10_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_10_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
@@ -214,147 +249,161 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_10_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_10_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_11_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_11_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 17%">
+        <div class="am-g zz" style="top: 21%">
             <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_11_2.jpg" width="80%" alt=""/>
+                <img class="am-Bchang" src="img/images/img_11_2.jpg" width="80%" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_11_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_12_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_12_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_12_2.jpg" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:10%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_12_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_12_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_13_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_13_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_13_2.png" width="100%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:3%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_13_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_13_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_14_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_14_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 28%">
+        <div class="am-g zz" style="top: 23%">
             <div class="am-u-sm-12">
                 <img src="img/images/img_14_2.jpg" width="83%" alt=""/>
             </div>
         </div>
-        <div class="am-g zz" style="bottom:4%; ">
+        <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_14_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_14_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_15_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_15_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 17%">
+        <div class="am-g zz" style="top: 20%">
             <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_15_2.jpg" width="80%" alt=""/>
+                <img  class="am-Bchang" src="img/images/img_15_2.jpg" width="80%" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_15_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_16_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_16_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
-        <div class="am-g zz" style="top: 17%">
+        <div class="am-g zz" style="top: 20%">
             <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_16_2.jpg" width="50%" alt=""/>
+                <img class="am-changtu" src="img/images/img_16_2.jpg" width="50%" alt=""/>
             </div>
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_16_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 2%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_17_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
-            </div>
-        </div>
-        <div class="am-g zz" style="top: 17%">
-            <div class="am-u-sm-12" style="height:100%;text-align: center;">
-                <img src="img/images/img_17_2.jpg" width="50%" alt=""/>
-            </div>
-        </div>
-        <div class="am-g zz" style="bottom:1%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_17_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
+            </div>
+            <div class="am-u-sm-1">&nbsp;</div>
+        </div>
+        <div class="am-g zz" style="top: 20%">
+            <div class="am-u-sm-12" style="height:100%;text-align: center;">
+                <img class="am-changtu" src="img/images/img_17_2.jpg" width="50%" alt=""/>
+            </div>
+        </div>
+        <div class="am-g zz" style="bottom:2%; ">
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
                 <img src="img/images/img_17_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
@@ -362,11 +411,13 @@
 
     </div>
 
-    <div class="section" style="width: 100%;height: 100%">
+    <div class="section">
         <div class="am-g zz" style="top: 5%">
-            <div class="am-u-sm-12" style="text-align: center;">
-                <img src="img/images/img_18_1.png" style="margin: 0 auto"  height="60px" width="auto" alt=""/>
+            <div class="am-u-sm-1">&nbsp;</div>
+            <div class="am-u-sm-10" style="text-align: center;">
+                <img src="img/images/img_18_1.png" style="margin: 0 auto" height="60px" width="auto" alt=""/>
             </div>
+            <div class="am-u-sm-1">&nbsp;</div>
         </div>
         <div class="am-g zz" style="top: 28%">
             <div class="am-u-sm-12">
@@ -375,23 +426,21 @@
         </div>
         <div class="am-g zz" style="bottom:2%; ">
             <div class="am-u-sm-1">&nbsp;</div>
-            <div class="am-u-sm-10"  style="width:100%;height: 60%;">
-                <img src="img/images/img_18_3.png" width="100%"alt=""/>
+            <div class="am-u-sm-10" style="width:100%;height: 60%;">
+                <img src="img/images/img_18_3.png" width="100%" alt=""/>
             </div>
             <div class="am-u-sm-1">&nbsp;</div>
         </div>
     </div>
 
 
-
-
-
-    <div class="section am-bg-a" style="width: 100%;height: 100%;">
+    <div class="section am-bg-a">
         <img src="img/mob_20.jpg" width="100%" height="100%" alt=""/>
     </div>
-    <div class="section am-bg-a" style="width: 100%;height: 100%;">
+    <div class="section am-bg-a">
         <img src="img/mob_21.jpg" width="100%" height="100%" alt=""/>
-        <div class="zz" style="bottom: 0%;text-align: center;color: #3E3636;">&nbsp;<span> &copy;  2016 妙思科技  Muses technology.co.td<br/>im@muses.cc</span></div>
+        <div class="zz" style="bottom: 0%;width:100%;text-align: center;color: #3E3636;"><span> &copy; 2016 妙思科技  Muses technology.co.td<br/>im@muses.cc</span>
+        </div>
     </div>
 </div>
 </body>
@@ -403,9 +452,10 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <script src="js/jquery.fullpage.js"></script>
+<script src="js/wx.js"></script>
 <script>
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 //        var Images = '';
 //        for(var i=0;i<22;i++){
 //              Images+='<div class="section"  style="width: 100%;height: 100%;"><img alt="" width="100%" height="100%"/></div>';
@@ -419,12 +469,96 @@
 //                return this.src = "img/mob_"+i+".jpg";
 //            }
 //        });
+        var AMimage    = $(".am-u-sm-12 img");   //中间图
+        var AMimage2   = $(".am-u-sm-10 img");   //底部图
+        var AMChangtu  = $(".am-u-sm-12 .am-changtu");  //长图手机
+        var AMBChangtu = $(".am-u-sm-12 .am-Bchang");   //11,15特别处理
+        var Height     = $(window).height();
+//        alert("Height:      "+Height);
+        if(Height<=389){
+            AMimage.attr('width','70%');
+            AMBChangtu.attr('width','55%');
+            AMChangtu.attr('width','35%');
+            AMimage2.attr('width','70%');
+        }else if(Height<=520){
+            console.log("进入了长图<=480");
+            AMimage.attr('width','93%');
+            AMBChangtu.attr('width','70%');
+            AMChangtu.attr('width','40%');
+            AMimage2.attr('width','90%');
+        }else if(Height>=521){
+//            alert("进入大于521");
+            AMimage.attr('width','96%');
+            AMBChangtu.attr('width','75%');
+            AMChangtu.attr('width','41%');
+            AMimage2.attr('width','90%');
+        }
 
 
+        //转码 分享到微信朋友圈的时候
+        function urlEncoding(pageUrl) {
+            while (pageUrl.indexOf(":") > -1 || pageUrl.indexOf("/") > -1 ||
+            pageUrl.indexOf("?") > -1 || pageUrl.indexOf("=") > -1 ||
+            pageUrl.indexOf("&") > -1) {
+                pageUrl = pageUrl.replace(":", "%3a");
+                pageUrl = pageUrl.replace("/", "%2f");
+                pageUrl = pageUrl.replace("?", "%3f");
+                pageUrl = pageUrl.replace("=", "%3d");
+                pageUrl = pageUrl.replace("&", "%26");
+            }
+            return pageUrl;
+        }
 
+//微信分享功能
+        var wx_config = null;
+        $.ajax({
+            url: "http://weixin.91zmt.com/jsapi/configjson?webcode=czldly&url=" + urlEncoding('http://m.91zmt.com/2016') + "&apis=onMenuShareAppMessage,onMenuShareTimeline&debug=true",
+            type: "GET",
+            dataType: "JSON",
+            async: false,
+            cache: false,
+            success: function (data) {
+                console.log(data);
+                wx_config = data;
+            },
+            error: function () {
+            }
+        });
+
+        wx.config(wx_config);
+        wx.ready(function () {
+//分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: '91自媒体系统功能介绍', // 分享标题
+                link: '91zmt.com', // 分享链接
+                imgUrl: '', // 分享图标
+                success: function (data) {
+                    alert('ok');
+                },
+                cancel: function () {
+                    alert('cancel');
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+//分享给朋友
+            wx.onMenuShareAppMessage({
+                title: '91自媒体系统功能介绍', // 分享标题
+                desc: '一站式在线旅游服务平台', // 分享描述
+                link: 'http://m.91zmt.com/2016', // 分享链接
+                imgUrl: '', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        });
 
         //满屏翻页
-        $(function(){
+        $(function () {
             $("#fullpage").fullpage();
         });
     });
