@@ -35,15 +35,19 @@ table{border-collapse:collapse;}
 	position:absolute;
 	top:91%;
 	left:35%;
-	width:100px;
-	height:25px;
+	width:31%;
+	height:5%;
 	text-align:center;
-	line-height:25px;
 	color:#fff;
 	border:1px solid #2b73cd;
 	background:#2b73cd;
 	border-radius:3px;
 	-webkit-border-radius:3px;
+	display:table;
+}
+.website-video span{
+	display:table-cell;
+    vertical-align:middle;
 }
 .swiper-part1{
 	width:84%;

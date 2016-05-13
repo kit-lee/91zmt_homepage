@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>官网2</title>
+<link href="swiper.min.css" type="text/css" rel="stylesheet" />
+<style>
+/* ---------- init ---------- */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+ul, li, img {
+	width: 100%;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.website-video {
+	position: absolute;
+	top: 91%;
+	left: 35%;
+	width: 31%;
+	height: 5%;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #2b73cd;
+	background: #2b73cd;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: table;
+}
+.website-video span {
+	display: table-cell;
+	vertical-align: middle;
+}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <ul class="swiper-wrapper">
+    <li class="swiper-slide"><img src="img/page-01.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-02.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-03.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-04.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-05.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-06.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-07.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-08.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-09.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-10.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-11.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+    <li class="swiper-slide"><img src="img/page-12.jpg" width="640" height="1136" />
+      <div class="website-video"><span>View work</span></div>
+    </li>
+  </ul>
+</div>
+<script src="jquery-1.11.1.min.js"></script> 
+<script src="swiper.jquery.js"></script> 
+<script>
+var getUrlParam = function(name){
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+		return unescape(r[2]);
+	}
+	return null;
+}
+	
+$(function(){
+
+    var swiper = new Swiper('.swiper-container',{
+		direction: 'horizontal',
+		height: $(window).height(),
+		initialSlide: parseInt(getUrlParam('p') || 1) - 1
+		
+	});
+
+});
+</script>
+</body>
+</html>
