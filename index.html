@@ -325,14 +325,14 @@ $(function(){
     //拉取赞数
 	var userList;
 	$.ajax({  
-		 url: 'http://test.platform.91zmt.com/interface/webcontent' ,  
+		 url: 'http://platform.91zmt.com/interface/webcontent' ,  
 		 type: 'POST',  
 		 dataType: 'json',  
 		 data: {
 			 template:'0',
 			 webcode:'muses',
-			 uid:'38',
-			 cid:'1314'
+			 uid:'64',
+			 cid:'1308'
 		 },
 		 success: function (data) {
 			 userList = data;
@@ -354,7 +354,7 @@ $(function(){
 				likes = userList[i].likes;
 			}
 		}
-		$.post('http://test.platform.91zmt.com/interface/webcontent/like', {cid:id }, function(w){}, 'json');
+		$.post('http://platform.91zmt.com/interface/webcontent/like', {cid:id }, function(w){}, 'json');
 		$(this).find('img').attr('src','img/app-2-a1.png');
 		$(this).find('span').text(likes+1);
 	});
@@ -378,9 +378,9 @@ $(function(){
 			alert('留言信息不能为空');
 			return;
 		}
-		$.post('http://test.platform.91zmt.com/interface/guestmessage',{
+		$.post('http://platform.91zmt.com/interface/guestmessage',{
 			webcode:'muses',
-			 uid:'38',
+			 uid:'64',
             name:$name.val(),
             mobile:$phone.val(),
             message:$message.val(),
