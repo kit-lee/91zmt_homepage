@@ -65,6 +65,9 @@ table {
 	width: 100%;
 }
 .head-gif{
+	width:100%;
+}
+/*--.head-gif{
 	position:relative;
 	background:url(img/app-2-1.jpg);
 	width:100%;
@@ -77,7 +80,7 @@ table {
 	left:50%;
 	transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
-}
+}--*/
 .head-part1 {
 	width:100%;
 	position: absolute;
@@ -612,20 +615,27 @@ table {
 .head-part-c2 {display: block; font-size:12px;}
 .head-part-c3 {display: block; font-size:11px;}
 .contact-item2 img {top: 62%;}
-
+.contact-item1 input{height:24px;}
+.contact-item1 button{height:35px;}
+.contact-item1 textarea{height:80px;}
 }
 @media (min-width: 321px) and (max-width: 375px) and (min-height: 569px) and (max-height: 667px) {
 .head-part-c1 {display: block; font-size:15px;}
 .head-part-c2 {display: block; font-size:12px;}
 .head-part-c3 {display: block; font-size:12px;}
 .contact-item2 img {top: 62%;}
-
+.contact-item1 input{height:24px;}
+.contact-item1 button{height:35px;}
+.contact-item1 textarea{height:80px;}
 }
 @media (min-width: 376px) and (max-width: 540px) and (min-height: 668px) and (max-height: 960px) {
 .head-part-c1 {display: block; font-size:15px;}
 .head-part-c2 {display: block; font-size:12px;}
 .head-part-c3 {display: block; font-size:12px;}
 .contact-item2 img {top: 62%;}
+.contact-item1 input{height:24px;}
+.contact-item1 button{height:35px;}
+.contact-item1 textarea{height:80px;}
 
 }
 @media (min-width: 541px) and (max-width: 563px) and (min-height: 961px) and (max-height: 1000px) {
@@ -633,6 +643,9 @@ table {
 .head-part-c2 {display: block; font-size:12px;}
 .head-part-c3 {display: block; font-size:12px;}
 .contact-item2 img {top: 62%;}
+.contact-item1 input{height:24px;}
+.contact-item1 button{height:35px;}
+.contact-item1 textarea{height:80px;}
 
 }
 @media (min-width: 564px) and (max-width: 621px) and (min-height: 1001px) and (max-height: 1104px) {
@@ -640,6 +653,10 @@ table {
 .head-part-c2 {display: block; font-size:12px;}
 .head-part-c3 {display: block; font-size:12px;}
 .contact-item2 img {top: 62%;}
+.contact-item1 input{height:24px;}
+.contact-item1 button{height:35px;}
+.contact-item1 textarea{height:80px;}
+
 }
 
 
