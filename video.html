@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>妙思科技</title>
+<link type="text/css" rel="stylesheet" href="index.css" />
+<style>
+/* ---------- init ---------- */
+
+html, body {
+	height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0;
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+	word-wrap: break-word;
+}
+body, button, input, select, textarea {
+	font-family: Microsoft YaHei, STXihei, STHeiti, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+th {
+	text-align: inherit;
+}
+ol, ul {
+	list-style: none;
+}
+fieldset, img {
+	border: 0;
+	vertical-align: middle;
+}
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: 500;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+ins, a {
+	color: #000;
+	text-decoration: none;
+}
+a, img {
+	-webkit-touch-callout: none;
+}
+table {
+	border-collapse: collapse;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+ul, li, img {
+	width: 100%;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+.swiper-slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <ul class="swiper-wrapper">
+    <li class="swiper-slide"></li>
+  </ul>
+</div>
+<div class="swiper-container">
+  <ul class="swiper-wrapper">
+    <li class="swiper-slide"><img src="img/video.jpg" width="640" height="1136" /></li>
+  </ul>
+</div>
+<script src="jquery-1.11.1.min.js"></script> 
+<script src="swiper.jquery.js"></script> 
+<script>
+$(function(){
+
+    var swiper = new Swiper('.swiper-container',{
+		height: $(window).height()
+	});
+
+});
+</script>
+</body>
+</html>
