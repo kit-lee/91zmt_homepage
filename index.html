@@ -437,13 +437,13 @@ function urlEncoding(pageUrl) {
 
 ////调用上传图片接口
 var wx_config = {};
-var  URL = "http://muses.cc";
+var  URL = "http://muses.cc/";
 console.log(URL);
 $.ajax({
     url: "http://weixin.91zmt.com/jsapi/configjson?&appId=wx95687d6a3571db03&webcode=czldly&url=" + urlEncoding(URL) + "&apis=chooseImage,uploadImage,previewImage," +
     "onMenuShareTimeline,onMenuShareAppMessage,onMenuShareQQ,onMenuShareWeibo,onMenuShareQZone," +
     "hideMenuItems,showMenuItems" +
-    "&debug=false",
+    "&debug=true",
     type: "GET",//jsApiList
     dataType: "json",
     async: false,
@@ -463,8 +463,8 @@ wx.ready(function () {
     wx.onMenuShareAppMessage({
         title: '妙思科技', // 分享标题
         desc: '数字化体验与互动营销专家', // 分享描述
-        link: 'http://muses.cc', // 分享链接
-        imgUrl: 'http://demo.91zmt.com/yinfeng/website/img/logo.jpg', // 分享图标
+        link: 'http://muses.cc/', // 分享链接
+        imgUrl: 'http://muses.cc/img/logo.jpg', // 分享图标
         type: '', // 分享类型,music、video或link，不填默认为link
         dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
         success: function () {
@@ -479,8 +479,8 @@ wx.ready(function () {
     wx.onMenuShareTimeline({
         title: '妙思科技', // 分享标题
 		desc: '数字化体验与互动营销专家', // 分享描述
-        link: 'http://muses.cc', // 分享链接
-        imgUrl: 'http://demo.91zmt.com/yinfeng/website/img/logo.jpg', // 分享图标
+        link: 'http://muses.cc/', // 分享链接
+        imgUrl: 'http://muses.cc/img/logo.jpg', // 分享图标
         success: function () {
                       	
             // 用户确认分享后执行的回调函数
