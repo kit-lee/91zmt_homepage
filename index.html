@@ -353,10 +353,13 @@ $(function(){
 				id = userList[i].cid;
 				likes = userList[i].likes;
 			}
-		}
+		}if (!$(this).find('img').hasClass('on') ){
 		$.post('http://platform.91zmt.com/interface/webcontent/like', {cid:id }, function(w){}, 'json');
 		$(this).find('img').attr('src','img/app-2-a1.png');
+		$(this).find('img').addClass('on');
+		
 		$(this).find('span').text(likes+1);
+		}else{}
 	});
 	
 	//提交
