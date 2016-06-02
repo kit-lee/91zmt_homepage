@@ -1,0 +1,449 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <title>满意度调查</title>
+    <link rel="stylesheet" href="css/amazeui.min.css"/>
+    <style type="text/css">
+        .am-div-fen{width: 100%;text-align: center;}
+        input{border-radius: 6px;}
+        #ratings{
+            width:98%;
+            /*padding-left:8%;*/
+        }
+        li{
+            display:inline-block;
+        }
+        #ratings li{
+            display:-moz-inline-box;
+            *display:inline;
+        }
+        .rating{
+            float: left;
+            width: 22px;
+            height: 22px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid #ffffff;
+            margin-right: 2px;
+            text-align: center;
+            line-height: 18px;
+        }
+        .activity{
+            background-color: #f37b1d;
+            border-color: #A57017;
+        }
+        .un-activity{
+            background-color: none;
+            border-color: #ffffff;
+        }
+        .am-inpu-radis input,#message{
+            border-radius: 6px;
+        }
+        .so .hating{
+            border: 1px solid #fff;
+        }
+        .f{
+        color:#f37b1d}
+        .borders{
+            border: 1px solid #f37b1d!important;
+        }
+        .am-form-style{
+            font-size: 1.7rem;text-align: center;border: 2px dashed #5bc798;border-radius: 7px;padding-bottom: 10px;margin-bottom: 15px;
+        }
+        .tishiRed{border:1px solid red!important;}
+        .am-input-radis{
+            width: 98%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        [class*=am-u-]{
+            padding: 0;
+        }
+        fieldset{
+            padding: 0;
+            margin: 0;
+        }
+        .am-header{
+            width: 100%;
+            height: 49px;
+            line-height: 49px;
+        }
+        em, i{
+            font-style: normal;
+        }
+    </style>
+    <!-- Piwik -->
+    <script type="text/javascript"> var _paq = _paq || []; _paq.push(["setDomains", ["*.lfs.xkjzx.com","*.lfs.91zmt.com"]]); _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); (function() { var u="//www.91zmt.com/piwik/"; _paq.push(['setTrackerUrl', u+'piwik.php']); _paq.push(['setSiteId', 2]); var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s); })(); </script>
+    <noscript><p><img src="//www.91zmt.com/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+</head>
+
+<body style="background-color: #5bc798;color:black">
+<div id="opinion--view" style="background-color:#5bc798;display: block; ">
+
+    <div class="am-container am-padding-vertical-sm">
+        <div style="margin-bottom: 20px;">
+            <div class="am-panel-bd am-text-sm">
+                <div class="am-text-xl am-text-center">
+                    <div style="margin:.4rem 5rem;">
+                        <img src="img/logo.png" id="order-qrcode-icon"  >
+                    </div>
+                    <!--满意度调查-->
+                    <img src="img/manyi.png" width="75px" alt=""/>
+                </div>
+            </div>
+        </div>
+        <form class="am-form-inline" role="form">
+            <div class="am-form-group am-inpu-radis am-input-radis">
+            <input style="border-radius: 6px;" type="text" class="am-form-field" id="name" placeholder="您的姓名">
+            </div>
+
+            <div class="am-form-group am-input-radis">
+            <input style="border-radius: 6px;" type="tel" class="am-form-field" id="mobile" placeholder="您的手机号">
+        </div>
+        </form>
+    <form id="am-form-div" class="am-form am-form-style" style="">
+        <!--<div class="am-form-group" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">-->
+            <!--<span>外部交通</span><br>-->
+            <!--<span>accessibility</span><br>-->
+            <!--<div class="chooseClick" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">-->
+                <!--<div class="am-radio-inline choseColor">-->
+                    <!--<input type="hidden" value="很满意"/>很满意-->
+                <!--</div>-->
+                <!--<div class="am-radio-inline choseColor">-->
+                    <!--<input type="hidden" value="满意"/>满意-->
+                <!--</div>-->
+                <!--<div class="am-radio-inline choseColor">-->
+                    <!--<input type="hidden" value="一般"/>一般-->
+                <!--</div>-->
+                <!--<div class="am-radio-inline choseColor">-->
+                    <!--<input type="hidden" value="不满意"/>不满意-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+            <div class="am-mormirs am-form-group0" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">
+                您的身份是？
+                <div class="am-g chooseClick0" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">
+                    <div class="am-u-sm-2 choseColor0 am-radio-inline" value="1、景区">
+                        <input type="hidden" />景区
+                    </div>
+                    <div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、服务运营商">
+                        <input type="hidden" />服务运营商
+                    </div>
+                    <div class="am-u-sm-4 choseColor0 am-radio-inline"  value="1、产品供应商">
+                        <input type="hidden"/>产品供应商
+                    </div>
+                    <!--<div class="am-u-sm-3 am-radio-inline choseColor0" value="1、不满意    ">-->
+                        <!--<input type="hidden" />不满意-->
+                        <!--</div>-->
+                </div>
+            </div>
+        <!--<div class="am-mormirs am-form-group0" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">-->
+            <!--您的身份是？-->
+            <!--<div class="am-g chooseClick0" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">-->
+                <!--<div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、是">-->
+                    <!--<input type="hidden" />是-->
+                <!--</div>-->
+                <!--<div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、否">-->
+                    <!--<input type="hidden" />否-->
+                <!--</div>-->
+                <!--&lt;!&ndash;<div class="am-u-sm-3 choseColor0 am-radio-inline"  value="1、一般">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="hidden"/>产品供应商&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="am-u-sm-3 am-radio-inline choseColor0" value="1、不满意    ">&ndash;&gt;-->
+                <!--&lt;!&ndash;<input type="hidden" />不满意&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+        </form>
+        <div style="margin-bottom: 0px;">
+            <!--<form class="am-form-inline" role="form">-->
+                <!--<div class="am-form-group am-inpu-radis" style="margin-bottom: 20px;">-->
+                    <!--<input style="border-radius: 3px;" type="text" class="am-form-field" id="name" placeholder="姓名/用户名">-->
+                <!--</div>-->
+
+                <!--<div class="am-form-group" style="margin-bottom: 20px;">-->
+                    <!--<input style="border-radius: 3px;" type="tel" class="am-form-field" id="mobile" placeholder="电话">-->
+                <!--</div>-->
+            <!--</form>-->
+            <form class="am-form">
+                <fieldset>
+                    <div class="am-form am-form-inlin">
+                        <div class="am-form-group" style="width:98%;margin:0 auto;margin-bottom: 20px;">
+                            <textarea class="" rows="5" id="message" placeholder="您的意见将是我们前进的方向"></textarea>
+                        </div>
+                        <div class="am-form-group" style="margin-bottom: 10px; font-size: 14px; text-align:center;">您有多大的可能将我们推荐给您的亲友<div>
+                            <div class="am-form-group am-div-fen so" style="margin-bottom: 10px; font-size: 12px;">
+                                <div class="am-g">
+                                    <!--<ul  id="ratings">-->
+                                        <!--<li class="rating"><img src="img/ha.png" alt=""/></li>-->
+                                        <!--<li class="rating" rating="10">10</li>-->
+                                        <!--<li class="rating" rating="9">9</li>-->
+                                        <!--<li class="rating" rating="8">8</li>-->
+                                        <!--<li class="rating" rating="7">7</li>-->
+                                        <!--<li class="rating" rating="6">6</li>-->
+                                        <!--<li class="rating" rating="5">5</li>-->
+                                        <!--<li class="rating" rating="4">4</li>-->
+                                        <!--<li class="rating" rating="3">3</li>-->
+                                        <!--<li class="rating" rating="2">2</li>-->
+                                        <!--<li class="rating" rating="1">1</li>-->
+                                        <!--<li class="rating"><img src="img/ku.png" alt=""/></li>-->
+                                    <!--</ul>-->
+                                </div>
+                                <div id="ratings" class="am-g so">
+                                    <div class="am-u-sm-1" rating=""><img style="padding-right: 4px;" src="img/ha.gif" alt=""/></div>
+                                    <div class="am-u-sm-1 hating" rating="10">10</div>
+                                    <div class="am-u-sm-1 hating" rating="9">9</div>
+                                    <div class="am-u-sm-1 hating" rating="8">8</div>
+                                    <div class="am-u-sm-1 hating" rating="7">7</div>
+                                    <div class="am-u-sm-1 hating" rating="6">6</div>
+                                    <div class="am-u-sm-1 hating" rating="5">5</div>
+                                    <div class="am-u-sm-1 hating" rating="4">4</div>
+                                    <div class="am-u-sm-1 hating" rating="3">3</div>
+                                    <div class="am-u-sm-1 hating" rating="2">2</div>
+                                    <div class="am-u-sm-1 hating" rating="1">1</div>
+                                    <div class="am-u-sm-1"><img style="padding-left:4px;" src="img/ku.gif"  alt=""/></div>
+                                </div>
+                            </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+        <div id="message-box" style="margin:10px 0px;"></div>
+
+        <div class="margin-top:20px; margin-bottom:10px;" id="view-order-detail-submit-btn-panel">
+            <button type="button" id="view-opinion-submit-btn" class="am-btn am-btn-warning am-btn-block">提交</button>
+        </div>
+<div class="am-header" style="position:fixed; left:5px; top:5px;border:none; display:none;" id="home-icon">
+    <!--<a href="index.html" class="am-header-left"><i class="am-icon-home am-icon-md" style="min-width: 48px;color:white;"></i></a>-->
+    <div style="">
+        <!--成功提交,感谢！-->
+        <div style="margin:.4rem 5rem;">
+            <img src="img/logo.png">
+        </div>
+        <img src="img/thanks.png" alt=""/>
+    </div>
+    <div style="margin：0 auto;text-align:center" id="app-submitcount"></div>
+    <div style="margin-top: 30px;">
+        <button type="button" class="am-btn am-btn-warning" onclick="window.location='/'" style="width: 97%">返回首页</button>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/config.js" charset="UTF-8"></script>
+<script>
+    var arrScore = [];
+//    var arrTitle = {
+//        "chineseTitle":["外部交通","内部游览线路","观景设施","路标指示","景物介绍牌","宣传资料","导游讲解","服务质量",
+//                        "安全保障","环境卫生","旅游秩序","总体印象"
+//                        ],
+//        "englishTitle":["accessibility","Inner itinerary","facilities for sightseeing","Signs for directions",
+//                         "introduction board","information material","visiting guide","service quality",
+//                            "safety & security","environmental hygiene","public order","public order","overall impression"
+//                        ]
+//    };
+    var arrTitle = ['是否已有公众号','是否已有在线直订平台','是否需要运营服务','是否需要推广'];
+    var i, s, d;
+    var html = '';
+    var bb = '';
+    var g = 1;
+            for(i in arrTitle) {
+                html = html+   //bb = bb+'<div class="am-mormirs am-form-group'+i+'" style="border: 1px solid #ffffff;border-r
+                // adius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">'+
+                '<div class="am-mormirs am-form-group'+(parseInt(i)+1)*1+'" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">'+
+                   '' + arrTitle[i] + '<br>';
+                  // bb= bb +  '' + englishTitle[i] + '<br>'+
+                html = html+
+                        '<div class="am-g chooseClick'+(parseInt(i)+1)*1+'" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">'+
+                       '<div class="am-u-sm-5 choseColor'+(parseInt(i)+1)*1+' am-radio-inline" value="'+(parseInt(i)+2)*1+'、是">'+
+                       '<input type="hidden" />是'+
+                       '</div>'+
+                       '<div class="am-u-sm-5 choseColor'+(parseInt(i)+1)*1+' am-radio-inline" value="'+(parseInt(i)+2)*1+'、否">'+
+                       '<input type="hidden" />否'+
+                       '</div>'+
+                        '</div>'+
+                        '</div>';
+            }
+    html += bb;
+
+    $("#am-form-div").append(html);
+    var arrAnswer = [];
+    $(".am-mormirs").click(function(){
+        $(".am-mormirs").removeClass("borders");
+        $(this).removeClass('tishiRed');
+        $(this).addClass("borders")
+        }
+    );
+
+
+    var choosesum = 4;
+    var funny = function(e){
+        $(".choseColor"+e).click(function(){
+            $(".chooseClick"+e+">div").removeClass("f");
+            $(this).addClass("f");
+            $(this).attr("value");
+           //var sss = $(this).attr("value");
+            arrAnswer[e] = $(this).attr("value");
+            console.log(arrAnswer[e]);
+            console.log(arrAnswer);
+        });
+    };
+    for(var e = 0;e<=choosesum;e++){
+        funny (e);
+    }
+
+    var ratingTxt = "";
+    $(".hating").on("click", function(e){
+        $("#ratings>div").removeClass("activity");
+        $(this).addClass("activity");
+        ratingTxt = $(this).attr("rating");
+    });
+
+    var isposted = false;
+    $("#view-opinion-submit-btn").on("click",function(e){
+        //console.log(arrAnswer);
+        var r, TitleLength = $("#am-form-div").children().length;
+        var dateTime = new Date();
+        var formDate = formatDate(dateTime);
+        var checkDate = localStorage.getItem('app.satisfaction.lastsubmit');
+
+//        if(checkDate !== undefined){
+//            if(checkDate === formDate){
+//                alert("你今天已经提交过了");
+//                return false;
+//            }
+//        }
+
+        var arrNot = [],arrfinsh = 0;
+        for(r=0;r<TitleLength;r++){
+            if(arrAnswer[r]===undefined || arrAnswer[r] === ''||arrAnswer[r]==='null'){
+                arrNot.push(r);
+                console.log(arrNot);
+                for(var s = 0 ;s <arrNot.length;s++)
+                $(".am-form-group"+arrNot[s]).addClass("tishiRed");
+            }
+        }
+        if(arrNot.length ==0){
+            arrfinsh = 1;
+            console.log(arrfinsh);
+        }
+        //if(arrNot.length ==0)
+//        else{
+//            alert("请填写完成");
+//            return false;
+//        }
+
+        var nameTxt = $("#name").val().trim();
+        var mobileTxt = $("#mobile").val().trim();
+        console.log(arrAnswer);
+        console.log(arrAnswer.length);
+        console.log('==='+arrAnswer);
+        var messageTxt = $("#message").val().trim()+','+arrAnswer;
+        console.log(messageTxt);
+
+        var isNull = function(v){
+            return (undefined == v || "" == v || v.length == 0);
+        };
+
+    if(mobileTxt.length < 11){
+        alert("请输入正确手机号码");
+        return false;
+    }
+    if (!!!isNull(mobileTxt)) {
+      var patrn = /^(13[0-9]{9})|(14[0-9])|(18[0-9])|(15[0-9][0-9]{8})$/;
+      if (!patrn.exec(mobileTxt)) {
+          //$("#message-box").html("请输入正确的手机号码").css("color","#ffffff").show().delay(2000).hide(0);
+          alert("请输入正确的手机号码");
+          $(document).scrollTop(0,100);
+          $("#mobile").focus();
+         return false;
+      };
+    };
+    if (isNull(ratingTxt)) {
+       //$("#message-box").html("请您打个分~").css("color","red").show().delay(2000).hide(0);
+        alert("请您打个分");
+       return false;
+    };
+
+        /**
+         * 游客留言信息提交接口
+         * @param webcode 网站代码
+         * @param uid 客户标识
+         * @param name 姓名/用户名
+         * @param mobile 手机号码
+         * @param message 内容
+         * @param rating 评分
+         * @return {result: true|false, msg:”错误说明”}
+         */
+        if(!isposted){
+            isposted = true;
+            $.ajax({
+                url:config.base + '/interface/guestmessage',
+                data:{
+                    webcode:config.webcode,
+                    uid:config.uid,
+                    name:nameTxt,
+                    mobile:mobileTxt,
+                    message:messageTxt,
+                    rating:ratingTxt
+                },
+                cache:false,
+                type:'POST',
+                dataType:'JSON',
+                success:function(data){
+
+                    if(data.result == true || data.result == "true"){
+                        var date = new Date(); //提交成功保存当前日期
+                        var checkDate = formatDate(date);
+                        localStorage.setItem('app.satisfaction.lastsubmit', checkDate);
+                        if(data.count!==undefined){
+                            $('#app-submitcount').html('您是第<span style="color:white">'+data.count+'</span>位帮助我们变得更优秀的顾客');
+                        }else{
+                            $('#app-submitcount').hide();
+                        }
+                        $("#opinion--view").hide();//opinion--view
+                        $("#view-order-detail-submit-btn-panel").hide();
+                        //$("#suning-frame").css({"width":window.innerWidth+"px","height":window.innerHeight+"px"}).show();
+                        $("#home-icon").show();
+                        //window.location.href = "/";
+
+                    }
+                    else{
+                        $("#message-box").html(data.msg).show();
+                        alert(1);
+
+                    }
+
+                    isposted = false;
+                }
+            });
+        }
+    });
+    function formatDate(now) { //日期转换
+        var year = now.getFullYear();
+        var month = now.getMonth()+1;
+        var date = now.getDate();
+
+        return year+"-"+month+"-"+date;
+    }
+</script>
+</body>
+</html>
