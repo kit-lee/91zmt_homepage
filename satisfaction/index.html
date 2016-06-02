@@ -135,6 +135,40 @@
                 <!--</div>-->
             <!--</div>-->
         <!--</div>-->
+            <div class="am-mormirs am-form-group0" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">
+                您的身份是？
+                <div class="am-g chooseClick0" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">
+                    <div class="am-u-sm-2 choseColor0 am-radio-inline" value="1、景区">
+                        <input type="hidden" />景区
+                    </div>
+                    <div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、服务运营商">
+                        <input type="hidden" />服务运营商
+                    </div>
+                    <div class="am-u-sm-4 choseColor0 am-radio-inline"  value="1、产品供应商">
+                        <input type="hidden"/>产品供应商
+                    </div>
+                    <!--<div class="am-u-sm-3 am-radio-inline choseColor0" value="1、不满意    ">-->
+                        <!--<input type="hidden" />不满意-->
+                        <!--</div>-->
+                </div>
+            </div>
+        <!--<div class="am-mormirs am-form-group0" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">-->
+            <!--您的身份是？-->
+            <!--<div class="am-g chooseClick0" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">-->
+                <!--<div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、是">-->
+                    <!--<input type="hidden" />是-->
+                <!--</div>-->
+                <!--<div class="am-u-sm-5 choseColor0 am-radio-inline" value="1、否">-->
+                    <!--<input type="hidden" />否-->
+                <!--</div>-->
+                <!--&lt;!&ndash;<div class="am-u-sm-3 choseColor0 am-radio-inline"  value="1、一般">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="hidden"/>产品供应商&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="am-u-sm-3 am-radio-inline choseColor0" value="1、不满意    ">&ndash;&gt;-->
+                <!--&lt;!&ndash;<input type="hidden" />不满意&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
         </form>
         <div style="margin-bottom: 0px;">
             <!--<form class="am-form-inline" role="form">-->
@@ -217,51 +251,39 @@
 <script src="js/config.js" charset="UTF-8"></script>
 <script>
     var arrScore = [];
-    var arrTitle = {
-        "chineseTitle":["外部交通","内部游览线路","观景设施","路标指示","景物介绍牌","宣传资料","导游讲解","服务质量",
-                        "安全保障","环境卫生","旅游秩序","总体印象"
-                        ],
-        "englishTitle":["accessibility","Inner itinerary","facilities for sightseeing","Signs for directions",
-                         "introduction board","information material","visiting guide","service quality",
-                            "safety & security","environmental hygiene","public order","public order","overall impression"
-                        ]
-    };
-    var i, s, d,
-            chineseTitle = arrTitle.chineseTitle,
-            chooeseTitle = arrTitle.chineseTitle,
-            englishTitle = arrTitle.englishTitle;
+//    var arrTitle = {
+//        "chineseTitle":["外部交通","内部游览线路","观景设施","路标指示","景物介绍牌","宣传资料","导游讲解","服务质量",
+//                        "安全保障","环境卫生","旅游秩序","总体印象"
+//                        ],
+//        "englishTitle":["accessibility","Inner itinerary","facilities for sightseeing","Signs for directions",
+//                         "introduction board","information material","visiting guide","service quality",
+//                            "safety & security","environmental hygiene","public order","public order","overall impression"
+//                        ]
+//    };
+    var arrTitle = ['是否已有公众号','是否已有在线直订平台','是否需要运营服务','是否需要推广'];
+    var i, s, d;
     var html = '';
     var bb = '';
     var g = 1;
-            for(i in chineseTitle) {
-//                if(i==0){
-                    bb = bb+'<div class="am-mormirs am-form-group'+i+'" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">'+
-                    '' + chineseTitle[i] + '<br>';
-                    bb= bb +  '' + englishTitle[i] + '<br>'+
-//                    for(s in chineseTitle){
-                        '<div class="am-g chooseClick'+i+'" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">'+
-                        '<div class="am-u-sm-3 choseColor'+i+'" value="'+(parseInt(i)+1)*1+'、很满意">'+
-                        '<input type="hidden" />很满意'+
-                        '</div>'+
-                        '<div class="am-u-sm-3 choseColor'+i+'" value="'+(parseInt(i)+1)*1+'、满意">'+
-                        '<input type="hidden" />满意'+
-                        '</div>'+
-                        '<div class="am-u-sm-3 choseColor'+i+'"  value="'+(parseInt(i)+1)*1+'、一般">'+
-                        '<input type="hidden"/>一般'+
-                        '</div>'+
-                        '<div class="am-u-sm-3 am-radio-inline choseColor'+i+'" value="'+(parseInt(i)+1)*1+'、不满意    ">'+
-                        '<input type="hidden" />不满意'+
-                        '</div>'+
+            for(i in arrTitle) {
+                html = html+   //bb = bb+'<div class="am-mormirs am-form-group'+i+'" style="border: 1px solid #ffffff;border-r
+                // adius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">'+
+                '<div class="am-mormirs am-form-group'+(parseInt(i)+1)*1+'" style="border: 1px solid #ffffff;border-radius:6px;margin:3px;background-color:#ffffff;line-height:19px;padding-top:10px;">'+
+                   '' + arrTitle[i] + '<br>';
+                  // bb= bb +  '' + englishTitle[i] + '<br>'+
+                html = html+
+                        '<div class="am-g chooseClick'+(parseInt(i)+1)*1+'" style="margin-top:19px;margin-bottom: 10px;text-algin:center;">'+
+                       '<div class="am-u-sm-5 choseColor'+(parseInt(i)+1)*1+' am-radio-inline" value="'+(parseInt(i)+2)*1+'、是">'+
+                       '<input type="hidden" />是'+
+                       '</div>'+
+                       '<div class="am-u-sm-5 choseColor'+(parseInt(i)+1)*1+' am-radio-inline" value="'+(parseInt(i)+2)*1+'、否">'+
+                       '<input type="hidden" />否'+
+                       '</div>'+
                         '</div>'+
                         '</div>';
-//                    }
-//                }else{
-//                    bb = bb+'<span style="color: #fff;">' + chineseTitle[i] + '</span><br>';
-//                    bb= bb +  '<span>' + englishTitle[i] + '</span><br>';
-//                }
             }
-
     html += bb;
+
     $("#am-form-div").append(html);
     var arrAnswer = [];
     $(".am-mormirs").click(function(){
@@ -272,7 +294,7 @@
     );
 
 
-    var choosesum = 11;
+    var choosesum = 4;
     var funny = function(e){
         $(".choseColor"+e).click(function(){
             $(".chooseClick"+e+">div").removeClass("f");
@@ -280,8 +302,8 @@
             $(this).attr("value");
            //var sss = $(this).attr("value");
             arrAnswer[e] = $(this).attr("value");
-//            console.log(arrAnswer[e]);
-//            console.log(arrAnswer);
+            console.log(arrAnswer[e]);
+            console.log(arrAnswer);
         });
     };
     for(var e = 0;e<=choosesum;e++){
@@ -303,12 +325,12 @@
         var formDate = formatDate(dateTime);
         var checkDate = localStorage.getItem('app.satisfaction.lastsubmit');
 
-        if(checkDate !== undefined){
-            if(checkDate === formDate){
-                alert("你今天已经提交过了");
-                return false;
-            }
-        }
+//        if(checkDate !== undefined){
+//            if(checkDate === formDate){
+//                alert("你今天已经提交过了");
+//                return false;
+//            }
+//        }
 
         var arrNot = [],arrfinsh = 0;
         for(r=0;r<TitleLength;r++){
@@ -324,15 +346,18 @@
             console.log(arrfinsh);
         }
         //if(arrNot.length ==0)
-        else{
-            alert("请填写完成");
-            return false;
-        }
+//        else{
+//            alert("请填写完成");
+//            return false;
+//        }
 
         var nameTxt = $("#name").val().trim();
         var mobileTxt = $("#mobile").val().trim();
+        console.log(arrAnswer);
+        console.log(arrAnswer.length);
+        console.log('==='+arrAnswer);
         var messageTxt = $("#message").val().trim()+','+arrAnswer;
-
+        console.log(messageTxt);
 
         var isNull = function(v){
             return (undefined == v || "" == v || v.length == 0);
