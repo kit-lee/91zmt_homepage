@@ -15,7 +15,7 @@
     <meta name="x5-fullscreen" content="true">
     <meta name="browsermode" content="application">
     <meta name="x5-page-mode" content="app">
-    <title>留言</title>
+    <title>91自媒体-景区直订推广平台</title>
     <link rel="stylesheet" href="css/amazeui.min.css"/>
     <style type="text/css">
         .am-div-fen{width: 100%;text-align: center;}
@@ -249,6 +249,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <script src="js/config.js" charset="UTF-8"></script>
+<script src="js/wx.js"></script>
+<script src="js/wxshare.js"></script>
 <script>
     var arrScore = [];
 //    var arrTitle = {
@@ -336,28 +338,17 @@
         for(r=0;r<TitleLength;r++){
             if(arrAnswer[r]===undefined || arrAnswer[r] === ''||arrAnswer[r]==='null'){
                 arrNot.push(r);
-                console.log(arrNot);
                 for(var s = 0 ;s <arrNot.length;s++)
                 $(".am-form-group"+arrNot[s]).addClass("tishiRed");
             }
         }
         if(arrNot.length ==0){
             arrfinsh = 1;
-            console.log(arrfinsh);
         }
-        //if(arrNot.length ==0)
-//        else{
-//            alert("请填写完成");
-//            return false;
-//        }
 
         var nameTxt = $("#name").val().trim();
         var mobileTxt = $("#mobile").val().trim();
-        console.log(arrAnswer);
-        console.log(arrAnswer.length);
-        console.log('==='+arrAnswer);
         var messageTxt = $("#message").val().trim()+','+arrAnswer;
-        console.log(messageTxt);
 
         var isNull = function(v){
             return (undefined == v || "" == v || v.length == 0);
@@ -370,7 +361,6 @@
     if (!!!isNull(mobileTxt)) {
       var patrn = /^(13[0-9]{9})|(14[0-9])|(18[0-9])|(15[0-9][0-9]{8})$/;
       if (!patrn.exec(mobileTxt)) {
-          //$("#message-box").html("请输入正确的手机号码").css("color","#ffffff").show().delay(2000).hide(0);
           alert("请输入正确的手机号码");
           $(document).scrollTop(0,100);
           $("#mobile").focus();
@@ -378,7 +368,6 @@
       };
     };
     if (isNull(ratingTxt)) {
-       //$("#message-box").html("请您打个分~").css("color","red").show().delay(2000).hide(0);
         alert("请您打个分");
        return false;
     };
@@ -421,9 +410,7 @@
                         }
                         $("#opinion--view").hide();//opinion--view
                         $("#view-order-detail-submit-btn-panel").hide();
-                        //$("#suning-frame").css({"width":window.innerWidth+"px","height":window.innerHeight+"px"}).show();
                         $("#home-icon").show();
-                        //window.location.href = "/";
 
                     }
                     else{
@@ -444,6 +431,9 @@
 
         return year+"-"+month+"-"+date;
     }
+
+    wxshare.init('91自媒体-景区直订推广平台', '满意度调查&留言', 'http://m.91zmt.com/satisfaction/img/logo.png',
+                    '91自媒体-景区直订推广平台 客户留言')
 </script>
 </body>
 </html>
